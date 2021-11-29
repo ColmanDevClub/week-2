@@ -1,0 +1,17 @@
+html {
+  /*background: linear-gradient(hsl(236, 72%, 79%), hsl(237, 63%, 64%));*/
+}
+body {
+  background-image: url("../images/bg-bottom.svg"), url("../images/bg-top.svg");
+  background-repeat: no-repeat, no-repeat;
+  background-position: left bottom, right top;
+  background-attachment: fixed, fixed;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
