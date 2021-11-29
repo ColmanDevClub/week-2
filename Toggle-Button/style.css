@@ -1,0 +1,13 @@
+*{
+    margin:0px;
+    padding:0px;
+}
+html{
+    height:100%;
+}
+body{
+    height:100%;
+    background-image:url('./images/bg-top.svg'), url('./images/bg-bottom.svg');
+    background-repeat: no-repeat, no-repeat;
+    background-position: right top, left bottom;    
+}
