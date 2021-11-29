@@ -1,0 +1,37 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.working-canvas {
+    background-color: #293462;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.soap {
+    height: 100px;
+    width: 200px;
+}
+.soap div {
+    border-radius: 15px;
+}
+
+.soap__background {
+    background-color: #A64942;
+    height: 100%;
+}
+.soap__top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FE5F55;
+    height: 80%;
+}
+.soap__top__dark {
+    height: 30%;
+    width: 70%;
+    background-color: #A64942;
+}
