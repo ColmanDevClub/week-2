@@ -54,7 +54,6 @@ header p {
 .toggle--on {
     justify-content: flex-end;
     background-image: linear-gradient(to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
-
 }
 .toggle__ball {
     width: 25px;
@@ -67,13 +66,18 @@ header p {
 /***** main *****/
 main {
     display: flex;
-    margin-top: 100px;
+    width: 100vw;
+    justify-content: center;
+}
+.main__container {
+    display: flex;
+    margin-top: 10vh;
     width: 90vw;
     justify-content: center;
     flex-wrap: wrap;
 }
-
 .option-box {
+    margin-top: 4vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -115,4 +119,24 @@ main {
 }
 .btn p {
     color: white;
+}
+
+/* hover option box */
+.option-box:hover {
+    height: 58vh;
+    margin-top: 0px;
+    background-image: linear-gradient(to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+    z-index: 1;
+}
+.option-box:hover h2,.option-box:hover h3,.option-box:hover p {
+    color: white;
+}
+.option-box .gray-bar {
+    background-color: white;
+}
+.option-box:hover .btn {
+    background-image: linear-gradient(to right, hsl(0, 0%, 100%), hsl(0, 0%, 100%));
+}
+.option-box:hover .btn p {
+    color: hsl(237, 63%, 64%);
 }
