@@ -43,16 +43,19 @@ body {
 }
 
 .button-section {
+  position: absolute;
   display: flex;
-  justify-content: center;
-  gap: 5%;
+  justify-content: space-between;
+
   align-items: center;
-  width: 300px;
+  width: 250px;
   color: hsl(234, 14%, 74%);
+  top: 195px;
 }
+
 /* Toggle button**************************************************************************/
 .toggle-btn {
-  display: inline;
+  display: inline-block;
   position: relative;
   width: 70px;
   height: 40px;
@@ -131,6 +134,10 @@ body {
   padding: 5% 5%;
   z-index: 1;
 }
+.box:hover {
+  transform: scale(1.05);
+  transition: 0.5s;
+}
 hr {
   margin: 0;
   width: 300px;
@@ -193,4 +200,28 @@ hr {
   color: white;
   background: none;
   border-color: white;
+}
+
+@media screen and (max-width: 375px) {
+  body {
+    width: 100%;
+    height: 100vh;
+  }
+  .buttom-img {
+    visibility: hidden;
+  }
+  .top-img {
+    visibility: hidden;
+  }
+  .main-section {
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+  }
+  .box {
+    flex-shrink: 1;
+  }
+  hr {
+    width: 300px;
+  }
 }
