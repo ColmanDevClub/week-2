@@ -1,0 +1,227 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Raleway:wght@100&display=swap");
+
+html {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* Main container design ******************************************************************/
+body {
+  margin: 0;
+  padding: 0;
+  height: 850px;
+  width: 1440px;
+  position: relative;
+  font-family: "Montserrat";
+  color: hsl(233, 13%, 49%);
+  background-color: #f7f7ff;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5%;
+  flex-direction: column;
+}
+.buttom-img {
+  z-index: -1;
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+}
+.top-img {
+  z-index: -1;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+}
+.main-section {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+}
+
+.button-section {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+
+  align-items: center;
+  width: 250px;
+  color: hsl(234, 14%, 74%);
+  top: 195px;
+}
+
+/* Toggle button**************************************************************************/
+.toggle-btn {
+  display: inline-block;
+  position: relative;
+  width: 70px;
+  height: 40px;
+  appearance: none;
+  background-image: linear-gradient(
+    to right,
+    hsl(236, 72%, 79%),
+    hsl(237, 63%, 64%)
+  );
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+  outline: none;
+  border-radius: 20px;
+  transition: 0.5s;
+}
+
+.toggle-btn:hover {
+  background-image: linear-gradient(
+    to right,
+    hsl(234, 14%, 74%),
+    hsl(234, 14%, 74%)
+  );
+  cursor: pointer;
+}
+.toggle-btn::before {
+  content: "";
+  position: absolute;
+  left: 5px;
+  right: 0;
+  top: 5px;
+  bottom: 0px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: white;
+  transition: 0.5s;
+}
+.toggle-btn:checked::before {
+  transform: translateX(95%);
+}
+
+/*Text change*****************************************************************************/
+.toggle-btn:checked ~ .main-section .box .p1::after {
+  content: "19.99";
+}
+.toggle-btn:checked ~ .main-section .box .p2::after {
+  content: "24.99";
+}
+.toggle-btn:checked ~ .main-section .box .p3::after {
+  content: "39.99";
+}
+
+/*boxes styling *************************************************************************/
+.box {
+  border-radius: 4%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: space-between;
+  gap: 15px;
+  background-clip: padding-box;
+}
+.small-box {
+  background-color: white;
+  gap: 15px;
+  padding: 2% 5%;
+}
+.big-box {
+  color: white;
+  background-image: linear-gradient(
+    to bottom,
+    hsl(236, 72%, 79%),
+    hsl(237, 63%, 64%)
+  );
+
+  padding: 5% 5%;
+  z-index: 1;
+}
+.box:hover {
+  transform: scale(1.05);
+  transition: 0.5s;
+}
+hr {
+  margin: 0;
+  width: 300px;
+  opacity: 50%;
+}
+.prices {
+  font-size: 75px;
+  color: hsl(232, 13%, 33%);
+}
+.big-box .prices {
+  color: white;
+}
+.prices {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+.prices::before {
+  content: "$";
+  font-size: 40px;
+}
+.p1::after {
+  content: "199.99";
+}
+.p2::after {
+  content: "249.99";
+}
+.p3::after {
+  content: "399.99";
+}
+
+/*Learn more btn styling **************************************************************************/
+.learn-more {
+  background: linear-gradient(to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+  background-repeat: no-repeat;
+  border-radius: 15px;
+  border: 2px transparent solid;
+  width: 100%;
+  letter-spacing: 2px;
+  color: white;
+  margin-top: 5%;
+  font-family: "Montserrat";
+  padding: 5% 20%;
+  cursor: pointer;
+
+  background-clip: padding-box;
+}
+.big-box .learn-more {
+  background: white;
+  color: hsl(237, 63%, 64%);
+}
+.learn-more:hover {
+  color: hsl(237, 63%, 64%);
+
+  background-image: none;
+  border: 2px hsl(237, 63%, 64%) solid;
+}
+.big-box .learn-more:hover {
+  color: white;
+  background: none;
+  border-color: white;
+}
+
+@media screen and (max-width: 375px) {
+  body {
+    width: 100%;
+    height: 100vh;
+  }
+  .buttom-img {
+    visibility: hidden;
+  }
+  .top-img {
+    visibility: hidden;
+  }
+  .main-section {
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+  }
+  .box {
+    flex-shrink: 1;
+  }
+  hr {
+    width: 300px;
+  }
+}
