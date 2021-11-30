@@ -48,8 +48,8 @@ body{
 }
 .package-prop{
     display: block;    
-    border-top:1px solid hsl(240, 78%, 98%);
-    border-bottom: 1px solid hsl(240, 78%, 98%);
+    border-top:1px solid hsl(234, 14%, 74%);
+    border-bottom: 1px solid hsl(234, 14%, 74%);
     width:90%;
     padding: 10px 0px;
     margin: auto;
@@ -60,17 +60,20 @@ body{
 }
 .learn-btn{
     color:hsl(240, 78%, 98%);
-    background-color:hsl(237, 63%, 64%);
+    background-image: linear-gradient( to right , hsl(236, 72%, 79%) ,hsl(237, 63%, 64%));
     border:none;
     border-radius: 5px;
-    margin:15px auto;
+    margin:20px auto;
     display: block; 
     width:80%;
     padding: 10px 0px; 
     font-family: 'Montserrat';
 }
+.learn-btn:hover{
+    cursor: pointer;
+}
 
-/**/
+/*pro package style*/
 .pro-div{
     background-image: linear-gradient( to right , hsl(236, 72%, 79%) ,hsl(237, 63%, 64%));
     color:white;
@@ -79,13 +82,51 @@ body{
 .pro-learn-btn{
     color:hsl(237, 63%, 64%);
     background-color:hsl(240, 78%, 98%);
+    background-image:none;
     border:none;
     border-radius: 5px;
-    margin:15px auto;
+    margin:20px auto;
     display: block;   
     width:80%;
     padding: 10px 0px; 
 }
-/**/
-
+/*pro package style*/
 /* package styles */
+
+/* toggle switch */
+.toggle{
+    display: inline-block;
+    cursor: pointer;
+}
+.toggle-input{
+    display: none;
+}
+.toggle-fill{
+    position: relative;
+    margin:5px;
+    width:60px;
+    height:30px;
+    border-radius: 15px;
+    background:hsl(237, 63%, 64%);
+    transition: background 0.2s;
+}
+.toggle-input:checked ~ .toggle-fill{ /* when its checked => activate css */
+    background:hsl(236, 72%, 79%);
+}
+.toggle-fill::after{
+    content:"";
+    position: absolute;
+    top:0;
+    left:0;
+    width: 25px;
+    height: 26px;
+    margin:2px;
+    background:white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+    transition: transform 0.2s;
+}
+.toggle-input:checked ~ .toggle-fill::after{ /* when its checked => activate css */
+    transform:translateX(30px);
+}
+/* toggle switch */
