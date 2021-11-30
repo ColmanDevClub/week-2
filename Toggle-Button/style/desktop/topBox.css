@@ -1,0 +1,92 @@
+.top_box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 10em;
+  width: 13em;
+}
+.pricing {
+  order: 1;
+  text-align: center;
+}
+.pricing,
+h1 {
+  color: hsl(233, 13%, 49%);
+}
+.type_price {
+  order: 2;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.type_price p {
+  color: hsl(234, 14%, 74%);
+  font-size: small;
+}
+.annually {
+  order: 1;
+}
+.mid_button {
+  display: flex;
+  padding: 8px;
+  height: 30px;
+  width: 54px;
+  order: 2;
+}
+.monthly {
+  order: 3;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 54px;
+  height: 30px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 22px;
+  width: 22px;
+  left: 3px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background: linear-gradient(hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+}
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
