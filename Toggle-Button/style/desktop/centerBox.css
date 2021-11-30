@@ -100,7 +100,7 @@
   border: none;
   background-color: #fff;
   border-radius: 5px;
-  color: linear-gradient(hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+  color: hsl(236, 72%, 79%);
   text-decoration: none;
   height: 30px;
   margin: 22px 2px 2px 2px;
