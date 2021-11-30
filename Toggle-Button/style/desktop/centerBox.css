@@ -1,0 +1,100 @@
+.center_box {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.basic {
+  order: 1;
+  background-color: #fff;
+  border-radius: 5px;
+  height: 23em;
+  width: 23em;
+}
+.inner_basic {
+  margin-left: 2em;
+  margin-right: 2em;
+}
+.basic h1 {
+  color: hsl(232, 13%, 33%);
+  font-weight: 700;
+  font-size: 4em;
+  margin: auto;
+}
+.basic h3 {
+  color: hsl(233, 13%, 49%);
+}
+.basic hr {
+  border: 0;
+  height: 1px;
+  background: hsl(234, 14%, 74%);
+}
+.pro {
+  order: 2;
+  background: linear-gradient(hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+  border-radius: 5px;
+  height: 25em;
+  width: 20em;
+  margin: -1em 0em 0em 0em;
+}
+.inner_pro {
+  height: 23em;
+  width: 15em;
+  margin: 32px 0px 0px 30px;
+}
+.pro h1 {
+  color: #fff;
+  font-weight: 700;
+  font-size: 4em;
+  margin: auto;
+}
+.pro h3 {
+  color: #fff;
+}
+.pro hr {
+  border: 0;
+  height: 1px;
+  background: hsl(240, 78%, 98%);
+}
+
+.master {
+  order: 3;
+  background-color: #fff;
+  border-radius: 5px;
+  height: 23em;
+  width: 23em;
+}
+.inner_master {
+  margin-left: 2em;
+  margin-right: 2em;
+}
+.master h1 {
+  color: hsl(232, 13%, 33%);
+  font-weight: 700;
+  font-size: 4em;
+  margin: auto;
+}
+.master h3 {
+  color: hsl(233, 13%, 49%);
+}
+.master hr {
+  border: 0;
+  height: 1px;
+  background: hsl(234, 14%, 74%);
+}
+
+.purple_button {
+  border: none;
+  background: linear-gradient(hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+  border-radius: 5px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.white_button {
+  border: none;
+  background-color: #fff;
+  border-radius: 5px;
+  font-weight: bold;
+  color: linear-gradient(hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+}

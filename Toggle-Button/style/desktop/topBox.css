@@ -1,5 +1,10 @@
 .top_box {
   display: flex;
+  justify-content: center;
+  margin: 2em 2em 4em 2em;
+}
+.inner_box {
+  display: flex;
   flex-direction: column;
   justify-content: center;
   height: 10em;
@@ -9,9 +14,10 @@
   order: 1;
   text-align: center;
 }
-.pricing,
-h1 {
+.pricing h2 {
   color: hsl(233, 13%, 49%);
+  font-size: 30px;
+  font-weight: 700;
 }
 .type_price {
   order: 2;
