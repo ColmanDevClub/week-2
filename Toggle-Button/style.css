@@ -1,0 +1,19 @@
+body{
+    background-color: hsl(240, 78%, 98%);  
+}
+.header{
+    text-align: center;
+}
+.BoxsAnnually{
+    display: flex;
+    flex-direction:row;
+}
+.box1{
+    position:absolute;
+    background-color: white;
+    left:30%;
+    text-align: center;
+    width: 20%;
+    height: 60%;
+    border-radius: 5%;
+}
