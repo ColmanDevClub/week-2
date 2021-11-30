@@ -9,5 +9,30 @@ body{
     height:100%;
     background-image:url('./images/bg-top.svg'), url('./images/bg-bottom.svg');
     background-repeat: no-repeat, no-repeat;
-    background-position: right top, left bottom;    
+    background-position: right top, left bottom;
+    display:flex;
+    justify-content: center;
+    align-items: center;    
+}
+.flex-container{
+    display: flex;
+    flex-direction: column;
+    justify-content:space-around;
+    width:80%;
+    height:80%;
+    margin:auto;
+    text-align:center;
+}
+.top-flex-container{
+    flex:1;
+}
+.bottom-flex-container{
+    flex:3;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.package-prop{
+    display: block;
+    border-top:1px solid gray;
 }
