@@ -5,11 +5,9 @@
     font-weight: 700;
   }
   body {
-    background-image: url("../../images/bg-bottom.svg"),
-      url("../../images/bg-top.svg");
-    background-repeat: no-repeat, no-repeat;
-    background-position: left bottom, right top;
-    background-attachment: fixed, fixed;
+    background-image: url("../../images/bg-top.svg");
+    background-repeat: no-repeat;
+    background-position: -100% 0%;
     background-color: hsl(240, 78%, 98%);
   }
   .main_box {
