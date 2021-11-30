@@ -7,7 +7,7 @@
 .basic {
   order: 1;
   background-color: #fff;
-  border-radius: 5px;
+  border-radius: 10px;
   height: 25em;
   width: 19em;
 }
@@ -32,7 +32,7 @@
 .pro {
   order: 2;
   background: linear-gradient(hsl(236, 72%, 79%), hsl(237, 63%, 64%));
-  border-radius: 5px;
+  border-radius: 10px;
   height: 27em;
   width: 20em;
   margin: -1em 0em 0em 0em;
@@ -40,7 +40,7 @@
 .inner_pro {
   height: 23em;
   width: 15em;
-  margin: 40px 0px 0px 30px;
+  margin: 29px 0px 0px 33px;
 }
 .pro h1 {
   color: #fff;
@@ -60,7 +60,7 @@
 .master {
   order: 3;
   background-color: #fff;
-  border-radius: 5px;
+  border-radius: 10px;
   height: 25em;
   width: 19em;
 }
@@ -91,7 +91,7 @@
   color: #fff;
   text-decoration: none;
   height: 30px;
-  margin: 2px 2px 2px 2px;
+  margin: 22px 2px 2px 2px;
   padding: 10px 2px 2px 2px;
 }
 
@@ -103,5 +103,6 @@
   color: linear-gradient(hsl(236, 72%, 79%), hsl(237, 63%, 64%));
   text-decoration: none;
   height: 30px;
+  margin: 22px 2px 2px 2px;
   padding: 10px 2px 2px 2px;
 }
