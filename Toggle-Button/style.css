@@ -1,9 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
 *{
     margin:0px;
     padding:0px;
 }
 html{
     height:100%;
+}
+h1,h2,h3,h4,h5,h6{
+    padding:10px;
 }
 body{
     height:100%;
@@ -13,6 +17,7 @@ body{
     display:flex;
     justify-content: center;
     align-items: center;    
+    font-family: 'Montserrat';
 }
 .flex-container{
     display: flex;
@@ -29,10 +34,58 @@ body{
 .bottom-flex-container{
     flex:3;
     display: flex;
-    justify-content: space-evenly;
-    align-items: center;
+    justify-content: center;
+    align-items: baseline;
+}
+
+/* package styles */
+.plan-div{
+    border-radius: 7px;
+    background-color:white;
+    box-shadow: 0 0 20px -10px grey;
+    padding:20px;
+    margin: 20px 0;
 }
 .package-prop{
-    display: block;
-    border-top:1px solid gray;
+    display: block;    
+    border-top:1px solid hsl(240, 78%, 98%);
+    border-bottom: 1px solid hsl(240, 78%, 98%);
+    width:90%;
+    padding: 10px 0px;
+    margin: auto;
 }
+.price-div{
+    font-size: 2.5em;
+    margin:15px auto;
+}
+.learn-btn{
+    color:hsl(240, 78%, 98%);
+    background-color:hsl(237, 63%, 64%);
+    border:none;
+    border-radius: 5px;
+    margin:15px auto;
+    display: block; 
+    width:80%;
+    padding: 10px 0px; 
+    font-family: 'Montserrat';
+}
+
+/**/
+.pro-div{
+    background-image: linear-gradient( to right , hsl(236, 72%, 79%) ,hsl(237, 63%, 64%));
+    color:white;
+    padding: 40px 20px;
+}
+.pro-learn-btn{
+    color:hsl(237, 63%, 64%);
+    background-color:hsl(240, 78%, 98%);
+    border:none;
+    border-radius: 5px;
+    margin:15px auto;
+    display: block;   
+    width:80%;
+    padding: 10px 0px; 
+}
+/**/
+
+/* package styles */
