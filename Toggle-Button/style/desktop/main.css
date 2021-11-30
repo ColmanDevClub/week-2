@@ -25,4 +25,7 @@
   .attribution a {
     color: hsl(228, 45%, 44%);
   }
+  footer {
+    margin: 50px 2px 2px 2px;
+  }
 }
