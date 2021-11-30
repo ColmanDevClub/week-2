@@ -1,0 +1,113 @@
+@media only screen and (max-width: 375px) {
+  .center_box {
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+    flex-direction: column;
+  }
+
+  .basic {
+    order: 1;
+    background-color: #fff;
+    border-radius: 10px;
+    height: 25em;
+    width: 19em;
+    margin-bottom: 30px;
+  }
+  .inner_basic {
+    margin-left: 2em;
+    margin-right: 2em;
+  }
+  .basic h1 {
+    color: hsl(232, 13%, 33%);
+    font-weight: 700;
+    font-size: 4em;
+    margin: auto;
+  }
+  .basic h3 {
+    color: hsl(233, 13%, 49%);
+  }
+  .basic hr {
+    border: 0;
+    height: 1px;
+    background: hsl(234, 14%, 74%);
+  }
+  .pro {
+    order: 2;
+    background: linear-gradient(hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+    border-radius: 10px;
+    height: 25em;
+    width: 19em;
+    margin-bottom: 30px;
+  }
+  .inner_pro {
+    height: 23em;
+    width: 15em;
+    margin: 29px 0px 0px 33px;
+  }
+  .pro h1 {
+    color: #fff;
+    font-weight: 700;
+    font-size: 4em;
+    margin: auto;
+  }
+  .pro h3 {
+    color: #fff;
+  }
+  .pro hr {
+    border: 0;
+    height: 1px;
+    background: hsl(240, 78%, 98%);
+  }
+
+  .master {
+    order: 3;
+    background-color: #fff;
+    border-radius: 10px;
+    height: 25em;
+    width: 19em;
+    margin-bottom: 30px;
+  }
+  .inner_master {
+    margin-left: 2em;
+    margin-right: 2em;
+  }
+  .master h1 {
+    color: hsl(232, 13%, 33%);
+    font-weight: 700;
+    font-size: 4em;
+    margin: auto;
+  }
+  .master h3 {
+    color: hsl(233, 13%, 49%);
+  }
+  .master hr {
+    border: 0;
+    height: 1px;
+    background: hsl(234, 14%, 74%);
+  }
+  .purple_button {
+    display: block;
+    border: none;
+    text-align: center;
+    background: linear-gradient(hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+    border-radius: 5px;
+    color: #fff;
+    text-decoration: none;
+    height: 30px;
+    margin: 22px 2px 2px 2px;
+    padding: 10px 2px 2px 2px;
+  }
+
+  .white_button {
+    display: block;
+    border: none;
+    background-color: #fff;
+    border-radius: 5px;
+    color: hsl(236, 72%, 79%);
+    text-decoration: none;
+    height: 30px;
+    margin: 22px 2px 2px 2px;
+    padding: 10px 2px 2px 2px;
+  }
+}
