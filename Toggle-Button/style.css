@@ -7,6 +7,10 @@
 }
 body {
     background-color: hsl(240, 78%, 98%);
+    background-image: url(./images/bg-bottom.svg), url(./images/bg-top.svg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: bottom left, top right;
 }
 
 p {
@@ -15,16 +19,7 @@ p {
 h1 {
     margin: 15vh 0px 30px 0px;
 }
-.background-image-bottom {
-    position: absolute;
-    bottom: 0px;
 
-}
-.background-image-top {
-    position: absolute;
-    right: 0px;
-
-}
 
 /***** header *****/
 header {
@@ -131,7 +126,7 @@ main {
 .option-box:hover h2,.option-box:hover h3,.option-box:hover p {
     color: white;
 }
-.option-box .gray-bar {
+.option-box:hover .gray-bar {
     background-color: white;
 }
 .option-box:hover .btn {
@@ -140,3 +135,4 @@ main {
 .option-box:hover .btn p {
     color: hsl(237, 63%, 64%);
 }
+
