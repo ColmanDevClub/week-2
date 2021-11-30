@@ -45,6 +45,7 @@ body{
     box-shadow: 0 0 20px -10px grey;
     padding:20px;
     margin: 20px 0;
+    min-width: 250px;
 }
 .package-prop{
     display: block;    
@@ -129,4 +130,20 @@ body{
 .toggle-input:checked ~ .toggle-fill::after{ /* when its checked => activate css */
     transform:translateX(30px);
 }
+
+/*switch display*/
+.month-price{
+    display: none;
+}
+.annual-price{
+    display: inline-block;
+}
+.toggle-input:checked + .month-price{
+    display: inline-block;
+}
+.toggle-input:checked + .annual-price{
+    display:none;
+}
+
 /* toggle switch */
+
