@@ -1,8 +1,6 @@
-*::before,
-*::after {
-  box-sizing: border-box;
+html {
+  margin: 20px 0px;
 }
-
 body {
   margin: 0;
   display: flex;
@@ -13,25 +11,23 @@ body {
   background-color: hsl(240, 78%, 98%);
   color: hsl(233, 13%, 49%);
 }
-section {
-  margin: 50px;
-}
+
 body::before {
   content: "";
-  bottom: 5%;
+  bottom: -10%;
   height: 100%;
   width: 100%;
   position: absolute;
   background-image: url(/images/bg-bottom.svg);
   background-repeat: no-repeat;
   background-position: bottom left;
+  z-index: -10;
 }
 
 body::after {
   content: "";
   position: absolute;
   height: 100%;
-  bottom: 1%;
   width: 100%;
   background-image: url("/images/bg-top.svg");
   background-repeat: no-repeat;
@@ -101,16 +97,48 @@ label:active:after {
   width: 35px;
 }
 
-.toggle:checked ~ .pricing .pricing-item2 .pricing-item__price-cost a::after {
+input:checked
+  ~ .main-section
+  .pricing
+  .p1
+  .pricing-item__price-cost
+  .cost1::after {
   content: "19.99";
 }
-.a::after {
+
+input:checked
+  ~ .main-section
+  .pricing
+  .pricing-item2
+  .pricing-item__price-cost
+  .cost2::after {
+  content: "24.99";
+}
+
+.cost1::before,
+.cost2::before,
+.cost3::before {
+  content: "$";
+
+  font-size: 50px;
+}
+
+input:checked
+  ~ .main-section
+  .pricing
+  .p3
+  .pricing-item__price-cost
+  .cost3::after {
+  content: "39.99";
+}
+
+.cost1::after {
   content: "199.99";
 }
-.b::after {
+.cost2::after {
   content: "249.99";
 }
-.c::after {
+.cost3::after {
   content: "399.99";
 }
 
@@ -129,7 +157,9 @@ label:active:after {
   flex-wrap: wrap;
 }
 
-.pricing-item1 {
+.pricing-item,
+.p1,
+.p3 {
   background-color: white;
   color: hsl(234, 14%, 74%);
   display: flex;
@@ -150,7 +180,7 @@ label:active:after {
   display: flex;
   position: relative;
   top: -20px;
-  padding: 10px 0px 20px 0px;
+  padding: 10px 20px 20px 20px;
   z-index: 10;
   flex-direction: column;
   justify-content: center;
@@ -164,6 +194,7 @@ label:active:after {
 
 .pricing-item__price-cost {
   color: hsl(232, 13%, 33%);
+  align-items: center;
   text-align: center;
   font-size: 90px;
   padding-bottom: 50px;
@@ -201,7 +232,6 @@ label:active:after {
   text-transform: uppercase;
   letter-spacing: 0.1em;
 }
-
 .pricing-item__btn-white {
   white-space: nowrap;
   text-decoration: none;
@@ -213,4 +243,17 @@ label:active:after {
   font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 0.1em;
+}
+
+@media all and (max-width: 1200px) {
+  body {
+    width: 100%;
+  }
+  body::before {
+    background-image: none;
+  }
+
+  .pricing .pricing-item2 {
+    margin-top: 40px;
+  }
 }
