@@ -1,0 +1,182 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size:15px;
+    min-height: 100vh;;
+    background-color: hsl(240, 78%, 98%);
+    font-family: 'Montserrat', sans-serif;
+}
+body::before{
+    content: '';
+    background-image: url(images/bg-top.svg);
+    position: absolute;
+    background-repeat: no-repeat;
+    background-position: top right;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    top: 0;
+    right: 0;
+}
+body::after{
+    content: '';
+    background-image: url(images/bg-bottom.svg);
+    position: absolute;
+    background-repeat: no-repeat;
+    background-position: bottom left;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    bottom: 0;
+    left: 0;
+}
+label{
+    display: inline-block;
+    background-image: linear-gradient(to right,hsl(236, 72%, 79%),hsl(237, 63%, 64%));
+    height:30px;
+    width:60px;
+    border-radius:40px;
+    position:relative;
+    top:-90px;
+    z-index: 1;
+}
+.toggle[type="checkbox"]{
+    width: 0;
+    height: 0;
+    visibility: hidden;
+}
+input:checked + label .ball {
+    transform:translateX(30px);
+}
+.m1::after{
+    content: '19.99';
+}
+.m2::after{
+    content: '24.99';
+}
+.m3::after{
+    content: '39.99';
+}
+input:checked ~ .box .price-table .price-column .price.m1::after{
+    content: '199.99';
+}
+input:checked ~ .box .price-table .price-column .price.m2::after{
+    content: '249.99';
+}
+input:checked ~ .box .price-table .price-column .price.m3::after{
+    content: '399.99';
+}
+p{
+    color:hsl(234, 14%, 74%);
+    margin-right: 50px;
+    margin-left: 50px;
+}
+.ball{
+    background-color: white;
+    position: absolute;
+    top:4px;
+    left:3px;
+    cursor: pointer;
+    border-radius: 45px;
+    height:20px;
+    width:20px;
+}
+.change-price{
+    display: flex;
+}
+h1{
+    font-weight: bold;
+    color:hsl(232, 13%, 33%);
+    text-align: center;
+}
+.header{
+   position: relative;
+   margin:40px;
+   display: flex;    
+}
+.box{
+    width: 1440px;
+    position: relative;
+}
+.price-table{
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    margin: 1rem;
+}
+.price-column{
+    position: relative;
+    text-align: center;
+    background-color: white;
+    box-shadow: 0 7px 0px hsl(240, 78%, 98%);
+    border-radius: 8px;
+    padding: 2rem;
+    flex-grow: 1;
+    max-width: 350px;
+    height: 400px;
+}
+.price-column.second{ 
+    background: linear-gradient(to right,hsl(236, 72%, 79%),hsl(237, 63%, 64%));
+    color: white;
+    position: relative;
+    bottom: 30px;
+    height: 460px;
+}
+.column-header{
+    color:hsl(234, 14%, 74%);
+}
+.column-header.second{
+    position: relative;
+    top: 25px;
+}
+.price{
+    font-size:3.5rem;
+    margin:1rem;
+    color:hsl(232, 13%, 33%) solid;
+}
+.price.second{
+    position:relative;
+    top: 25px;
+    color:white;
+}
+.column-content{
+    display:flex;
+    flex-direction: column;
+   padding:5px;
+}
+.item{
+    border-top: 1px solid hsl(234, 14%, 74%);;
+    margin: 8px;
+    padding: 8px;
+    color: hsl(232, 13%, 33%) ;
+}
+.item.second{
+    border-top: 1px solid white;
+    color:white;  
+}
+.item.box{
+   position: relative;
+    border: 1px 1px 1px 1px solid ;
+    right: 8px;
+    width: 100%;
+    background: linear-gradient(to right,hsl(236, 72%, 79%),hsl(237, 63%, 64%));
+    border-radius: 8px;
+    color:white;
+}
+.item.box.second{
+    background-image:none;
+    background-color: white;
+    color: hsl(237, 63%, 64%);
+}
+.column-content.second{
+    position:relative;
+    top:25px;
+}
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
