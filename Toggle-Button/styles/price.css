@@ -1,0 +1,44 @@
+input:checked
+  ~ .main-section
+  .pricing
+  .p1
+  .pricing-item__price-cost
+  .cost1::after {
+  content: "19.99";
+}
+
+input:checked
+  ~ .main-section
+  .pricing
+  .pricing-item2
+  .pricing-item__price-cost
+  .cost2::after {
+  content: "24.99";
+}
+
+.cost1::before,
+.cost2::before,
+.cost3::before {
+  content: "$";
+
+  font-size: 50px;
+}
+
+input:checked
+  ~ .main-section
+  .pricing
+  .p3
+  .pricing-item__price-cost
+  .cost3::after {
+  content: "39.99";
+}
+
+.cost1::after {
+  content: "199.99";
+}
+.cost2::after {
+  content: "249.99";
+}
+.cost3::after {
+  content: "399.99";
+}
