@@ -44,16 +44,45 @@ body::after{
     border-radius:40px;
     position: relative;
 }
-
-input{
-    position:absolute;
-    left:9000px;
+label{
+    display: inline-block;
+    background-image: linear-gradient(to right,hsl(236, 72%, 79%),hsl(237, 63%, 64%));
+    height:30px;
+    width:60px;
+    border-radius:40px;
+    position:relative;
+    top:-90px;
+    z-index: 1;
+}
+.toggle[type="checkbox"]{
+    width: 0;
+    height: 0;
+    visibility: hidden;
 }
 input:checked + label .ball {
     transform:translateX(30px);
 }
-
-
+.m1::after{
+    content: '29.99';
+}
+.m2::after{
+    content: '24.99';
+}
+.m3::after{
+    content: '39.99';
+}
+input:checked ~ .box .price-table .price-column .price.m1::after{
+    content: '199.99';
+}
+input:checked ~ .box .price-table .price-column .price.m2::after{
+    content: '249.99';
+}
+input:checked ~ .box .price-table .price-column .price.m3::after{
+    content: '399.99';
+}
+p{
+    color:hsl(234, 14%, 74%);
+}
 .ball{
     background-color: white;
     position: absolute;
@@ -73,10 +102,9 @@ h1{
     text-align: center;
 }
 .header-page{
-   padding:20px;
-   margin:50px;
-
-    
+   position: relative;
+   margin:40px;
+   display: flex;    
 }
 .box{
     width: 1440px;
@@ -87,8 +115,6 @@ h1{
     justify-content: center;
     align-items: stretch;
     margin: 1rem;
- 
-  
 }
 .price-column{
     position: relative;
@@ -100,25 +126,20 @@ h1{
     flex-grow: 1;
     max-width: 350px;
     height: 400px;
-  
 }
 .price-column.second{ 
     background: linear-gradient(to right,hsl(236, 72%, 79%),hsl(237, 63%, 64%));
-  color: white;
- position: relative;
-bottom: 30px;
- height: 460px;
- 
-
+    color: white;
+    position: relative;
+    bottom: 30px;
+    height: 460px;
 }
-
 .column-header{
     color:hsl(234, 14%, 74%);
 }
 .column-header.second{
     position: relative;
     top: 25px;
-
 }
 .price{
     font-size:3.5rem;
@@ -134,10 +155,7 @@ bottom: 30px;
     display:flex;
     flex-direction: column;
    padding:5px;
-   
 }
-
-
 .item{
     border-top: 1px solid hsl(234, 14%, 74%);;
     margin: 8px;
@@ -146,8 +164,7 @@ bottom: 30px;
 }
 .item.second{
     border-top: 1px solid white;
-    color:white;
-   
+    color:white;  
 }
 .item.box{
    position: relative;
@@ -162,7 +179,6 @@ bottom: 30px;
     background-image:none;
     background-color: white;
     color: hsl(237, 63%, 64%);
-    
 }
 .column-content.second{
     position:relative;
