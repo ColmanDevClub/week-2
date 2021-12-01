@@ -36,14 +36,6 @@ body::after{
     bottom: 0;
     left: 0;
 }
-.slider{
-    display: inline-block;
-    background-image: linear-gradient(to right,hsl(236, 72%, 79%),hsl(237, 63%, 64%));
-    height:30px;
-    width:60px;
-    border-radius:40px;
-    position: relative;
-}
 label{
     display: inline-block;
     background-image: linear-gradient(to right,hsl(236, 72%, 79%),hsl(237, 63%, 64%));
@@ -63,7 +55,7 @@ input:checked + label .ball {
     transform:translateX(30px);
 }
 .m1::after{
-    content: '29.99';
+    content: '19.99';
 }
 .m2::after{
     content: '24.99';
