@@ -1,0 +1,194 @@
+html {
+  margin: 20px 0px;
+}
+
+hr {
+  border-top: 1px solid rgb(224, 219, 219);
+  border-bottom: 0px;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Montserrat";
+  background-color: hsl(240, 78%, 98%);
+  color: hsl(233, 13%, 49%);
+}
+
+body::before {
+  content: "";
+  bottom: -10%;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background-image: url(/images/bg-bottom.svg);
+  background-repeat: no-repeat;
+  background-position: bottom left;
+  z-index: -10;
+}
+
+body::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-image: url("/images/bg-top.svg");
+  background-repeat: no-repeat;
+  background-position: top right;
+  z-index: -1;
+}
+
+.headline {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 250px;
+  color: hsl(234, 14%, 74%);
+  top: 100px;
+}
+
+.attribution {
+  display: flex;
+  margin-right: 20px 600px 0 0;
+  justify-content: center;
+  align-items: flex-end;
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+.btn-div {
+  color: hsl(234, 14%, 74%);
+  display: flex;
+  margin: 5px;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.pricing {
+  display: flex;
+  margin: 50px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.pricing-item,
+.p1,
+.p3 {
+  background-color: white;
+  color: hsl(234, 14%, 74%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  border-radius: 10px;
+  padding: 20px;
+  width: 350px;
+  height: 500px;
+  box-shadow: 0 0 5px rgb(194, 191, 191);
+}
+.price {
+  color: white;
+}
+.pricing-item2 {
+  color: white;
+  display: flex;
+  position: relative;
+  top: -20px;
+  padding: 10px 20px 20px 20px;
+  z-index: 10;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  border-radius: 10px;
+  width: 350px;
+  height: 550px;
+  background-image: linear-gradient(to right, #a3a8f0, #696fdd);
+  box-shadow: 0 0 5px rgb(165, 164, 164);
+}
+
+.pricing-item__price-cost {
+  color: hsl(232, 13%, 33%);
+  margin: 0px 20px 0px 10px;
+  align-items: center;
+  text-align: center;
+  font-size: 90px;
+  padding-bottom: 50px;
+  border-bottom: 1px solid rgb(221, 218, 218);
+}
+.pricing-item__description {
+  color: hsl(233, 13%, 49%);
+}
+
+.pricing-item__list {
+  padding: 0%;
+  margin: 20px 20px 0 20px;
+}
+
+.pricing-item__feature {
+  list-style: none;
+  margin: 20px 10px;
+}
+
+.pricing-item__actions {
+  padding: 25px 100px;
+  display: flex;
+  justify-content: center;
+}
+
+.pricing-item__btn {
+  white-space: nowrap;
+  text-decoration: none;
+  padding: 15px 100px;
+  font-size: 15px;
+  color: white;
+  background-image: linear-gradient(to right, #a3a8f0, #696fdd);
+  border-radius: 10px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.pricing-item__btn:hover {
+  background-image: none;
+  color: #838ae4;
+  border: 1px solid gray;
+  border-radius: 10px;
+}
+
+.pricing-item__btn-white {
+  white-space: nowrap;
+  text-decoration: none;
+  padding: 15px 100px;
+  font-size: 15px;
+  color: #838ae4;
+  background-color: white;
+  border-radius: 10px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+.pricing-item__btn-white:hover {
+  background-image: linear-gradient(to right, #a3a8f0, #696fdd);
+  color: white;
+  border: 1px solid gainsboro;
+}
+
+@media all and (max-width: 1200px) {
+  body {
+    width: 100%;
+  }
+  body::before {
+    background-image: none;
+  }
+
+  .pricing .pricing-item2 {
+    margin-top: 40px;
+  }
+}

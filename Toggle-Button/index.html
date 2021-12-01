@@ -1,52 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link rel="stylesheet" href="/styles/style.css" />
+    <link rel="stylesheet" href="/styles/check-box.css">
+    <link rel="stylesheet" href="/styles/price.css">
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap"
+      rel="stylesheet"
+    />
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | [Challenge Name Here]</title>
+    <title>Frontend Mentor | [Challenge Name Here]</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  </head>
+  <body>
+    <!-- <input type="checkbox" id="test">
+    <label for="test"></label>
+    <div class="test1"></div> -->
 
-  Our Pricing
-  Annually
-  Monthly
-
-  Basic
-  &dollar;19.99
-  &dollar;199.99
-  500 GB Storage
-  2 Users Allowed
-  Send up to 3 GB
-  Learn More
-
-  Professional
-  &dollar;24.99
-  &dollar;249.99
-  1 TB Storage
-  5 Users Allowed
-  Send up to 10 GB
-  Learn More
-
-  Master
-  &dollar;39.99
-  &dollar;399.99
-  2 TB Storage
-  10 Users Allowed
-  Send up to 20 GB
-  Learn More
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
-</html>
+    <div class="headline">
+      <p>Annually</p>
+      <p>Monthly</p>
+      </div>
+      <h1>Our Pricing</h1>
+    <input type="checkbox" name="switch" id="switch" class="toggle"/>
+    <label for="switch"></label>
+    <section class="main-section">
+      <div class="pricing">
+        <div class="pricing-item p1 ">
+          <h3>Basic</h3>
+          <div class="pricing-item__price-cost ">
+            <div class="pricing-item__price cost1"></div>
+          </div>
+          <div class="pricing-item__description">
+            <ul class="pricing-item__list">
+              <li class="pricing-item__feature">500 GB Storage</li>
+              <hr />
+              <li class="pricing-item__feature">2Users Allowed</li>
+              <hr />
+              <li class="pricing-item__feature">Send Up To 3 GB</li>
+              <hr />
+            </ul>
+            <div class="pricing-item__actions">
+              <a href="./" class="pricing-item__btn">learn more</a>
+            </div>
+          </div>
+        </div>
+        <div class="pricing-item2">
+          <h3>Professional</h3>
+          <div class="pricing-item__price-cost">
+            <div class="pricing-item__price price cost2"></div>
+          </div>
+          <div class="pricing-item__description">
+            <ul class="pricing-item__list price">
+              <li class="pricing-item__feature">1 TB Storage</li>
+              <hr />
+              <li class="pricing-item__feature">5 Users Allowed</li>
+              <hr />
+              <li class="pricing-item__feature">Send Up To 10 GB</li>
+              <hr />
+            </ul>
+            <div class="pricing-item__actions">
+              <a href="./" class="pricing-item__btn-white">learn more</a>
+            </div>
+          </div>
+        </div>
+        <div class="pricing-item p3">
+          <h3>Master</h3>
+          <div class="pricing-item__price-cost">
+            <div class="pricing-item__price cost3"></div>
+          </div>
+          <div class="pricing-item__description">
+            <ul class="pricing-item__list">
+              <li class="pricing-item__feature">2 TB Storage</li>
+              <hr />
+              <li class="pricing-item__feature">10 Users Allowed</li>
+              <hr />
+              <li class="pricing-item__feature">Send Up To 20 GB</li>
+              <hr />
+            </ul>
+            <div class="pricing-item__actions">
+              <a href="./" class="pricing-item__btn ">learn more</a>
+            </div>
+          </div>
+        </div>
+      </section>
+        
+        <div class="attribution">
+          Challenge by
+          <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+          >. Coded by <a href="https://shon-hazan.tech">Shon Hazan</a>.
+        </div>
+      </body>
+      </html>
+      
