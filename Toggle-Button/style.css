@@ -18,15 +18,6 @@ body{
     flex-direction: column;
 }
 
-.page {
-    height: 100%;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
-}
-
 .bg-top {
     position: absolute;
     top: 0;
@@ -41,13 +32,6 @@ body{
     width: 250px;
 }
 
-.header {
-    position: relative;
-    text-align: center;
-    width: 80%;
-    height: 20%;
-}
-
 .title {
     color: hsl(232, 13%, 33%);
 }
@@ -59,12 +43,13 @@ body{
 }
 
 .row {
+    width: 16%;
     display: flex;
     justify-content: center;
 }
 
 .space-between {
-    width: 20%;
+    width: 100%;
     display: flex;
     justify-content: space-between;
 }
@@ -146,42 +131,60 @@ hr {
     width: 240px;
 }
 
-.checkbox {
-    position: relative;
-    cursor: pointer;
-    top: 8px;
-}
-
-.checkbox-switch:after, .checkbox-switch {
-    display: block;
-    height: 22px;
-    border-radius: 2em;
-}
-
 .checkbox-input {
-    display: none;
-}
-
-.checkbox-input:checked + .checkbox-switch:after {
-    left: 18px;
-}
-
-.checkbox-switch {
-    transition: 0.4s;
+    display: inline-block;
     position: relative;
     width: 40px;
+    height: 20px;
     background-image: linear-gradient(hsl(236, 72%, 79%) ,  hsl(237, 63%, 64%));
+    appearance: none;
+    outline: none;
+    border-radius: 20px;
+    transition: 0.4s;
+    bottom: 30px;
 }
 
-.checkbox-switch:after {
-    transition: 0.4s;
-    content: "";
-    width: 18px;
-    height: 18px;
-    margin: 2px;
-    background-color: white;
-    border: none;
+.checkbox-input:hover {
+background-color: hsl(233, 13%, 49%);
+cursor: pointer;
+}
+
+.checkbox-input::before {
     position: absolute;
-    top: 0px;
-    left: 0px;
+    content: "";
+    left: 2px;
+    top: 2px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: white;
+    transition: 0.5s;
+}
+
+.checkbox-input:checked::before {
+    left: 20px;
+}
+
+.price1::after {
+    content: "190.99";
+}
+
+.price2::after {
+    content: "240.99";
+}
+
+.price3::after {
+    content: "390.99";
+}
+
+.checkbox-input:checked ~ .main-section .card .price1::after {
+    content: "19.99";
+}
+
+.checkbox-input:checked ~ .main-section .card .price2::after {
+    content: "24.99";
+}
+
+.checkbox-input:checked ~ .main-section .card .price3::after {
+    content: "39.99";
 }
