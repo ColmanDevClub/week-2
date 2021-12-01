@@ -1,0 +1,180 @@
+body, html{
+    height: 100%;
+    max-width: 100%;
+    font-family: Montserrat;
+    background-color: hsl(240, 78%, 98%);
+    margin: 0;
+}
+
+.page {
+    position: relative;
+    justify-content: center;
+    height: 100%;
+    max-width: 1440px;
+}
+
+.bg-top {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 250px;
+}
+
+.bg-bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 250px;
+}
+
+.header {
+    position: relative;
+    text-align: center;
+    width: 80%;
+    height: 20%;
+}
+
+.title {
+    color: hsl(232, 13%, 33%);
+}
+
+.header-text {
+    color: hsl(234, 14%, 74%);
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+}
+
+.space-between {
+    width: 20%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.main-section {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    height: 70%;
+}
+
+.card {
+    position: relative;
+    width: 30%;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.edge {
+    height: 90%;
+    background-color: white;
+    margin-top: 2%;
+}
+
+.middle {
+    height: 100%;
+    background-image: linear-gradient(hsl(236, 72%, 79%) ,  hsl(237, 63%, 64%));
+}
+
+.main-text {
+    font-size: 14px;
+    font-weight: bold;
+    color: hsl(232, 13%, 33%);
+}
+
+.price-text {
+    font-size: xx-large;
+    font-weight: bold;
+    color: hsl(232, 13%, 33%);
+}
+
+.button {
+    padding: 8px 70px;
+    border-radius: 5px;
+    border: none;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.edge button {
+    background-image: linear-gradient(hsl(236, 72%, 79%) ,  hsl(237, 63%, 64%));
+    color: white;
+}
+
+.middle button {
+    background-color: white; 
+    color: hsl(237, 63%, 64%);
+}
+
+.middle p {
+    color: white;
+}
+
+.middle hr {
+    color: white;
+}
+
+.edge hr {
+    color: hsl(232, 13%, 33%);
+}
+
+hr {
+    width: 240px;
+}
+
+.checkbox {
+    position: relative;
+    cursor: pointer;
+    top: 8px;
+}
+
+.checkbox-switch:after, .checkbox-switch {
+    display: block;
+    height: 22px;
+    border-radius: 2em;
+}
+
+.checkbox-input {
+    display: none;
+}
+
+.checkbox-input:checked + .checkbox-switch:after {
+    left: 18px;
+}
+
+.checkbox-switch {
+    transition: 0.4s;
+    position: relative;
+    width: 40px;
+    background-image: linear-gradient(hsl(236, 72%, 79%) ,  hsl(237, 63%, 64%));
+}
+
+.checkbox-switch:after {
+    transition: 0.4s;
+    content: "";
+    width: 18px;
+    height: 18px;
+    margin: 2px;
+    background-color: white;
+    border: none;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+.checkbox-input:checked ~ .main-section .box .p2::after {
+    content: "24.99";
+}
+
+/* .second::after{
+    content: "24.99";
+} */
+/* 
+.checkbox-input:checked .second::after{
+    content: "240.99";
+} */
