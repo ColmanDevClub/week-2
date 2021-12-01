@@ -77,6 +77,10 @@ label {
   box-shadow: 0 0 20px #477a8550;
 }
 
+label:hover {
+  opacity: 0.6;
+}
+
 label::after {
   content: "";
   position: absolute;
@@ -232,6 +236,14 @@ input:checked
   text-transform: uppercase;
   letter-spacing: 0.1em;
 }
+
+.pricing-item__btn:hover {
+  background-image: none;
+  color: #838ae4;
+  border: 2px solid gray;
+  border-radius: 10px;
+}
+
 .pricing-item__btn-white {
   white-space: nowrap;
   text-decoration: none;
@@ -243,6 +255,10 @@ input:checked
   font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 0.1em;
+}
+.pricing-item__btn-white:hover {
+  background-image: linear-gradient(to right, #a3a8f0, #696fdd);
+  color: white;
 }
 
 @media all and (max-width: 1200px) {
