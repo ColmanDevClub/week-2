@@ -151,7 +151,7 @@ body::after {
 .pricing-item__btn:hover {
   background-image: none;
   color: #838ae4;
-  border: 2px solid gray;
+  border: 1px solid gray;
   border-radius: 10px;
 }
 
@@ -170,6 +170,7 @@ body::after {
 .pricing-item__btn-white:hover {
   background-image: linear-gradient(to right, #a3a8f0, #696fdd);
   color: white;
+  border: 1px solid gainsboro;
 }
 
 @media all and (max-width: 1200px) {
