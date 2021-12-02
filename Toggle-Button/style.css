@@ -76,7 +76,7 @@ body{
     height: 2rem;
     cursor: pointer;
     font-family: "Montserrat";
-    
+    margin-top: 15px;
    
 }
 .btn1:hover,.btn3:hover{
@@ -94,6 +94,7 @@ body{
     font-weight: bold;
     cursor: pointer;
     font-family: "Montserrat";
+    margin-top: 15px;
 }
 .btn2:hover{
     background: hsl(236, 72%, 79%) ;
@@ -114,6 +115,11 @@ h3,h4{
     text-align: center;
     display: block;
     margin-top: 500px;
+}
+.pricebox1, .pricebox2, .pricebox3{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 40px;
+    font-weight: bold;
 }
 input[type="checkbox"] {
     width: 0;
@@ -150,6 +156,21 @@ input:checked + label:after {
 input:checked + label {
     background-color: hsl(237, 63%, 64%);
 }
-
-    
-
+.pricebox1::after{
+    content:'199.99';
+}
+.pricebox2::after{
+    content:'249.99';
+}
+.pricebox3::after{
+    content:'399.99';
+}
+input:checked ~.BoxsAnnually .box1 .text1 .pricebox1::after{
+    content: '19.99';
+}
+input:checked ~.BoxsAnnually .box2 .text2 .pricebox2::after{
+    content: '24.99';
+}
+input:checked ~.BoxsAnnually .box3 .text3 .pricebox3::after{
+    content: '39.99';
+}
