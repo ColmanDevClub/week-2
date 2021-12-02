@@ -1,0 +1,12 @@
+.checkbox-holder {
+    margin-top: 20px;
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: x-small;
+}
+.checkbox-holder:hover {
+    opacity: 60%;
+}

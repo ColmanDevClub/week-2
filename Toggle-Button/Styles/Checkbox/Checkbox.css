@@ -1,0 +1,48 @@
+/* input[type="checkbox"] {
+    -webkit-appearance: none;
+    visibility: hidden;
+    display: none;
+    margin: 0;
+    padding: 0;
+} */
+input[type="checkbox"] {
+    position: relative; 
+    display: inline-block;
+    appearance: none;
+    margin: 0 30.25px 0 15px;
+    width: 50px;
+    height: 30px;
+    background: linear-gradient(hsl(236, 72%, 79%)  25%,hsl(237, 63%, 64%) 100%);
+    cursor: pointer;
+    border-radius: 20px;
+    transition: ease-in 0.5s;
+}
+input[type="checkbox"]::before {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    background: hsl(240, 78%, 98%);
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    transition: 0.5s;
+}
+input[type="checkbox"]:checked::before{
+    transform: translateX(20px);
+}
+input[type="checkbox"]:checked ~ .cards .card span[class="price-annually"] {
+    display: block;
+}
+input[type="checkbox"]:checked ~ .cards .card span[class="price-monthly"] {
+    display: none;
+}
+input[type="checkbox"]:checked ~ .cards .unique-card span[class="price-annually"] {
+    display: block;
+}
+input[type="checkbox"]:checked ~ .cards .unique-card span[class="price-monthly"] {
+    display: none;
+}
+input[type="checkbox"]:hover{
+    opacity: 60%;
+}
