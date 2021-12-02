@@ -1,0 +1,7 @@
+.blueCircle {
+    height: 20px;
+    width: 20px;
+    background-color: rgb(52, 104, 80);
+    border-radius: 50%;
+    display: inline-block;
+  }
