@@ -5,7 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style/style.css">
   <title>Frontend Mentor | [Challenge Name Here]</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
@@ -14,39 +17,65 @@
     .attribution a { color: hsl(228, 45%, 44%); }
   </style>
 </head>
+
 <body>
+  <div class="container">
+      <img src="images/bg-bottom.svg" class="bottom-bg">
+      <img src="images/bg-top.svg" class="top-bg">
 
-  Our Pricing
-  Annually
-  Monthly
 
-  Basic
-  &dollar;19.99
-  &dollar;199.99
-  500 GB Storage
-  2 Users Allowed
-  Send up to 3 GB
-  Learn More
+    <div class="box">
 
-  Professional
-  &dollar;24.99
-  &dollar;249.99
-  1 TB Storage
-  5 Users Allowed
-  Send up to 10 GB
-  Learn More
+      <div class="contain">
+        <span class="manually"></span>
+        <input type="checkbox" class=check>
+        <span class="annualy"></span>
+        <div class="content content-man"></div>
+        <div class="content content-ann"></div>
+      </div>
 
-  Master
-  &dollar;39.99
-  &dollar;399.99
-  2 TB Storage
-  10 Users Allowed
-  Send up to 20 GB
-  Learn More
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+
+      <div class="sub-container">
+        <div class="child">   <!--1nth child-->
+              <h1>Basic</h1>
+              <h2>19.99</h2>
+              <div class="line"></div>
+                <h3>500 GB Storage</h3>
+              <div class="line"></div>
+                <h3>2 Users Allowed</h3>
+              <div class="line"></div>
+              <h3>Send up to 3 GB</h3>
+              <div class="line"></div>
+              <button class="button">LEARN MORE</button>
+        </div>
+
+        <div class="child">
+              <h1>Professional</h1> <!--2nth child-->
+              <h2>24.99</h2>
+              <div class="line"></div>
+                <h3>500 GB Storage</h3>
+              <div class="line"></div>
+                <h3>2 Users Allowed</h3>
+              <div class="line"></div>
+              <h3>Send up to 3 GB</h3>
+              <div class="line"></div>
+              <button class="button">LEARN MORE</button>
+        </div>
+        <div class="child"> <!--3nth child-->
+              <h1>Master</h1>
+              <h2>39.99</h2>
+              <div class="line"></div>
+                <h3>2 TB Storage</h3>
+              <div class="line"></div>
+                <h3>10 Users Allowed</h3>
+              <div class="line"></div>
+              <h3>Send up to 20 GB</h3>
+              <div class="line"></div>
+              <button class="button">LEARN MORE</button>
+        </div>
+      </div>
+    </div>    
   </div>
 </body>
 </html>
+
