@@ -132,7 +132,7 @@ main {
     justify-content: space-between;
     align-items: center;
 }
-.btn {
+.option-box__btn {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -141,7 +141,7 @@ main {
     background-image: linear-gradient(to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
     border-radius: 5px;
 }
-.btn p {
+.option-box__btn p {
     color: white;
 }
 
@@ -160,10 +160,10 @@ main {
     .option-box:hover hr {
         border: 0.1px solid white;
     }
-    .option-box:hover .btn {
+    .option-box:hover .option-box__btn {
         background-image: linear-gradient(to right, hsl(0, 0%, 100%), hsl(0, 0%, 100%));
     }
-    .option-box:hover .btn p {
+    .option-box:hover .option-box__btn p {
         color: hsl(237, 63%, 64%);
     }
 }
@@ -190,10 +190,10 @@ main {
     .option-box:nth-child(2) hr {
         border: 0.1px solid white;
     }
-    .option-box:nth-child(2) .btn {
+    .option-box:nth-child(2) .option-box__btn {
         background-image: linear-gradient(to right, hsl(0, 0%, 100%), hsl(0, 0%, 100%));
     }
-    .option-box:nth-child(2) .btn p {
+    .option-box:nth-child(2) .option-box__btn p {
         color: hsl(237, 63%, 64%);
     }
     .option-box:last-child {
