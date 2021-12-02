@@ -15,7 +15,7 @@ font-size: 15px;
     margin-bottom: 10%px;
     display: flex;
     justify-content: center;
-    background-image: url(/images/bg-bottom.svg),url(/images/bg-top.svg);
+    background-image: url(/week-2/Toggle-Button/images/bg-bottom.svg),url(/week-2/Toggle-Button/images/bg-top.svg);
     background-repeat: no-repeat, no-repeat;
     background-position: left bottom, right top;
 }
@@ -70,7 +70,7 @@ font-size: 15px;
         background-color:hsl(240, 78%, 98%);
         display: flex;
         justify-content: center;
-        background-image: url(/images/bg-top.svg);
+        background-image: url(/week-2/Toggle-Button/images/bg-top.svg);
         background-repeat:  no-repeat;
         background-position:  right top;
     }
