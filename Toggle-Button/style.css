@@ -2,9 +2,11 @@
 *{
     margin:0px;
     padding:0px;
+    
 }
 html{
     height:100%;
+    
 }
 h1,h2,h3,h4,h5,h6{
     padding:10px;
@@ -96,11 +98,17 @@ body{
 
 /* toggle switch */
 .toggle{
+    position: relative;
+    margin: -40px 0px 30px 0px;
     display: inline-block;
     cursor: pointer;
 }
+.toggle-label{
+    margin:10px 50px;
+    display: inline-block;
+}
 .toggle-input{
-    display: none;
+    display: none;    
 }
 .toggle-fill{
     position: relative;
@@ -110,8 +118,9 @@ body{
     border-radius: 15px;
     background:hsl(237, 63%, 64%);
     transition: background 0.2s;
+    display: inline-block;
 }
-.toggle-input:checked ~ .toggle-fill{ /* when its checked => activate css */
+.toggle-input:checked ~ .toggle .toggle-fill{ /* when its checked => activate css */
     background:hsl(236, 72%, 79%);
 }
 .toggle-fill::after{
@@ -121,29 +130,204 @@ body{
     left:0;
     width: 25px;
     height: 26px;
-    margin:2px;
+    margin: 2px;
     background:white;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
     border-radius: 15px;
     transition: transform 0.2s;
+    display: inline-block;
 }
-.toggle-input:checked ~ .toggle-fill::after{ /* when its checked => activate css */
+.toggle-input:checked ~ .toggle .toggle-fill::after{ /* when its checked => activate css */
     transform:translateX(30px);
 }
-
-/*switch display*/
-.month-price{
-    display: none;
-}
-.annual-price{
-    display: inline-block;
-}
-.toggle-input:checked + .month-price{
-    display: inline-block;
-}
-.toggle-input:checked + .annual-price{
-    display:none;
-}
-
 /* toggle switch */
+.basic-price::before{
+    content: '199.99';
+    margin:auto;
+}
+.pro-price::before{
+    content: '249.99';
+    margin:auto;
+}
+.master-price::before{
+    content: '399.99';
+    margin:auto;
+}
+input:checked ~.bottom-flex-container .basic-div .price-div .basic-price::before{
+    content:'19.99';    
+}
+input:checked ~.bottom-flex-container .pro-div .price-div .pro-price::before{
+    content:'29.99';    
+}
+input:checked ~.bottom-flex-container .master-div .price-div .master-price::before{
+    content:'39.99';    
+}
 
+/*mobile*/
+@media (max-width:500px){
+    *{
+        margin:0px;
+        padding:0px;
+        
+    }
+    html{
+        height:100%;
+        
+    }
+    h1,h2,h3,h4,h5,h6{
+        padding:10px;
+    }
+    body{
+        height:100%;
+        background-image:url('./images/bg-top.svg'), url('./images/bg-bottom.svg');
+        background-repeat: no-repeat, no-repeat;
+        background-position: right top, left bottom;
+        display:flex;
+        justify-content: center;
+        align-items: center;    
+        font-family: 'Montserrat';
+    }
+    .flex-container{
+        display: flex;
+        flex-direction: column;
+        justify-content:space-around;
+        width:80%;
+        height:80%;
+        margin:auto;
+        text-align:center;
+    }
+    .top-flex-container{
+        flex:1;
+    }
+    .bottom-flex-container{
+        flex:3;
+        display: flex;
+        justify-content: center;
+        align-items: baseline;
+        flex-direction: column;
+    }
+    
+    /* package styles */
+    .plan-div{
+        border-radius: 7px;
+        background-color:white;
+        box-shadow: 0 0 20px -10px grey;
+        padding:20px;
+        margin: 20px 0;
+        min-width: 250px;
+    }
+    .package-prop{
+        display: block;    
+        border-top:1px solid hsl(234, 14%, 74%);
+        border-bottom: 1px solid hsl(234, 14%, 74%);
+        width:90%;
+        padding: 10px 0px;
+        margin: auto;
+    }
+    .price-div{
+        font-size: 2.5em;
+        margin:15px auto;
+    }
+    .learn-btn{
+        color:hsl(240, 78%, 98%);
+        background-image: linear-gradient( to right , hsl(236, 72%, 79%) ,hsl(237, 63%, 64%));
+        border:none;
+        border-radius: 5px;
+        margin:20px auto;
+        display: block; 
+        width:80%;
+        padding: 10px 0px; 
+        font-family: 'Montserrat';
+    }
+    .learn-btn:hover{
+        cursor: pointer;
+    }
+    
+    /*pro package style*/
+    .pro-div{
+        background-image: linear-gradient( to right , hsl(236, 72%, 79%) ,hsl(237, 63%, 64%));
+        color:white;
+        padding: 40px 20px;
+    }
+    .pro-learn-btn{
+        color:hsl(237, 63%, 64%);
+        background-color:hsl(240, 78%, 98%);
+        background-image:none;
+        border:none;
+        border-radius: 5px;
+        margin:20px auto;
+        display: block;   
+        width:80%;
+        padding: 10px 0px; 
+    }
+    /*pro package style*/
+    /* package styles */
+    
+    /* toggle switch */
+    .toggle{
+        position: relative;
+        margin: -40px 0px 30px 0px;
+        display: inline-block;
+        cursor: pointer;
+    }
+    .toggle-label{
+        margin:10px 50px;
+        display: inline-block;
+    }
+    .toggle-input{
+        display: none;    
+    }
+    .toggle-fill{
+        position: relative;
+        margin:5px;
+        width:60px;
+        height:30px;
+        border-radius: 15px;
+        background:hsl(237, 63%, 64%);
+        transition: background 0.2s;
+        display: inline-block;
+    }
+    .toggle-input:checked ~ .toggle .toggle-fill{ /* when its checked => activate css */
+        background:hsl(236, 72%, 79%);
+    }
+    .toggle-fill::after{
+        content:"";
+        position: absolute;
+        top:0;
+        left:0;
+        width: 25px;
+        height: 26px;
+        margin: 2px;
+        background:white;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+        border-radius: 15px;
+        transition: transform 0.2s;
+        display: inline-block;
+    }
+    .toggle-input:checked ~ .toggle .toggle-fill::after{ /* when its checked => activate css */
+        transform:translateX(30px);
+    }
+    /* toggle switch */
+    .basic-price::before{
+        content: '199.99';
+        margin:auto;
+    }
+    .pro-price::before{
+        content: '249.99';
+        margin:auto;
+    }
+    .master-price::before{
+        content: '399.99';
+        margin:auto;
+    }
+    input:checked ~.bottom-flex-container .basic-div .price-div .basic-price::before{
+        content:'19.99';    
+    }
+    input:checked ~.bottom-flex-container .pro-div .price-div .pro-price::before{
+        content:'29.99';    
+    }
+    input:checked ~.bottom-flex-container .master-div .price-div .master-price::before{
+        content:'39.99';    
+    }
+    
+}

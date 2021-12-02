@@ -6,7 +6,7 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   
-  <title>Frontend Mentor | [Challenge Name Here]</title>
+  <title>ozgemer:toggle-button</title>
 
   <!--style.css Link-->
   <link rel="stylesheet" href="./style.css">
@@ -20,24 +20,23 @@
   -->
 </head>
 <body>
-  <div class='flex-container'>
-    <div class='top-flex-container'>
-      <div class='switch-div'>
-        <h1>Our Pricing</h1>
-        Annually
-        <label class='toggle' for='myToggle'>
-          <input type='checkbox' id='myToggle' class='toggle-input'>
-          <div class='toggle-fill'></div>
-        </label>
-        Monthly
-      </div>
+  <div class='flex-container'>    
+    <div class='top-flex-container'>      
+      <h1>Our Pricing</h1>
+      <label class='toggle-label'>Annually</label>      
+      <label class='toggle-label'>Monthly</label>
     </div>
+
+    <input type='checkbox' id='my-toggle' class='toggle-input'>
+    <label class='toggle' for='my-toggle'>      
+      <div class='toggle-fill'></div>
+    </label>
+
     <div class='bottom-flex-container'>
       <div class='basic-div  plan-div'>
         <h3>Basic</h3>
         <div class='price-div'>
-          <span class='month-price'>&dollar;19.99</span>
-          <span class='annual-price'>&dollar;199.99</span>
+          <div class='basic-price'>&dollar;</div>
         </div>
         <span class='package-prop'>500 GB Storage</span>
         <span class='package-prop'>2 Users Allowed</span>
@@ -47,8 +46,7 @@
       <div class='pro-div  plan-div'>
         <h3>Professional</h3>
         <div class='price-div'>
-          <span class='month-price'>&dollar;24.99</span>
-          <span class='annual-price'>&dollar;249.99</span>
+          <div class='pro-price'>&dollar;</div>
         </div>
         <span class='package-prop'>1 TB Storage</span>
         <span class='package-prop'>5 Users Allowed</span>
@@ -58,8 +56,7 @@
       <div class='master-div  plan-div'>
         <h3>Master</h3>
         <div class='price-div'>
-          <span class='month-price'>&dollar;39.99</span>
-          <span class='annual-price'>&dollar;399.99</span>
+          <div class='master-price'>&dollar;</div>
         </div>
         <span class='package-prop'>2 TB Storage</span>
         <span class='package-prop'>10 Users Allowed</span>
