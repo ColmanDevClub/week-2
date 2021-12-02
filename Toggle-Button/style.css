@@ -9,8 +9,11 @@ body {
     background-color: hsl(240, 78%, 98%);
     background-image: url(./images/bg-bottom.svg), url(./images/bg-top.svg);
     background-repeat: no-repeat;
-    background-attachment: fixed;
     background-position: bottom left, top right;
+    background-size: auto, auto;
+}
+html {
+    height: 100vh;
 }
 
 p {
@@ -19,7 +22,10 @@ p {
 h1 {
     margin: 15vh 0px 30px 0px;
 }
-
+hr {
+    width: 100%;
+    border: 0.1px solid gray;
+}
 
 /***** header *****/
 header {
@@ -36,16 +42,9 @@ header p {
     color:  hsl(234, 14%, 74%);
 }
 
-.toggle {
-    display: flex;
-    align-items: center;
-    border-radius: 50px;
-    height: 30px;
-    width: 55px;
+/***** toggle *****/
+#toggle__checkbox {
     margin: 0px 15px;
-    /* background-image: linear-gradient(to right, hsl(240, 9%, 81%), hsl(234, 14%, 74%)); */
-}
-.toggle input[type="checkbox"] {
     position: relative;
     width: 55px;
     height: 30px;
@@ -53,7 +52,7 @@ header p {
     background-image: linear-gradient(to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
     border-radius: 50px;
 }
-.toggle input[type="checkbox"]::before {
+#toggle__checkbox::before {
     content: '';
     position: absolute;
     top: 50%;
@@ -65,24 +64,13 @@ header p {
     background-color: white;   
     transition: .2s; 
 }
-.toggle input:checked[type="checkbox"]::before {
+#toggle__checkbox:checked:before {
     left: 100%;
     transform: translate(-112.5%, -50%);
     transition: .2s;
 }
-.toggle input:checked[type="checkbox"] .option-box h3{
-    content: 'amit';
-}
-/* .toggle--on {
-    justify-content: flex-end;
-    background-image: linear-gradient(to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
-}
-.toggle__ball {
-    width: 25px;
-    height: 25px;
-    border-radius: 50%;
-    background-color: white;
-} */
+
+
 
 
 /***** main *****/
@@ -93,6 +81,7 @@ main {
 }
 .main__container {
     display: flex;
+    flex-wrap: wrap;
     margin-top: 10vh;
     width: 90vw;
     justify-content: center;
@@ -107,7 +96,7 @@ main {
     width: 35vh;
     border-radius: 10px;
     background-color: white;
-    box-shadow: 0px 0px 50px hsla(237, 63%, 64%, 0.397);
+    box-shadow: 0px 0px 50px hsla(237, 63%, 64%, 0.226);
     z-index: 0;
 }
 .option-box h2 {
@@ -124,11 +113,7 @@ main {
     justify-content: space-between;
     align-items: center;
 }
-.gray-bar {
-    background-color: gray;
-    height: 1px;
-    width: 100%;
-}
+
 .btn {
     display: flex;
     justify-content: center;
@@ -142,32 +127,56 @@ main {
     color: white;
 }
 
-/* hover option box */
-.option-box:hover {
-    height: 58vh;
-    margin-top: 0px;
-    background-image: linear-gradient(to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
-    z-index: 1;
-}
-.option-box:hover h2,.option-box:hover h3,.option-box:hover p {
-    color: white;
-}
-.option-box:hover .gray-bar {
-    background-color: white;
-}
-.option-box:hover .btn {
-    background-image: linear-gradient(to right, hsl(0, 0%, 100%), hsl(0, 0%, 100%));
-}
-.option-box:hover .btn p {
-    color: hsl(237, 63%, 64%);
+/***** hover option box *****/
+@media (min-width: 380px) {
+
+    .option-box:hover {
+        height: 58vh;
+        margin-top: 0px;
+        background-image: linear-gradient(to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+        z-index: 1;
+    }
+    .option-box:hover h2,.option-box:hover h3,.option-box:hover p {
+        color: white;
+    }
+    .option-box:hover hr {
+        border: 0.1px solid white;
+    }
+    .option-box:hover .btn {
+        background-image: linear-gradient(to right, hsl(0, 0%, 100%), hsl(0, 0%, 100%));
+    }
+    .option-box:hover .btn p {
+        color: hsl(237, 63%, 64%);
+    }
 }
 
-@media (max-width: 370px) {
+@media (max-width: 375px) {
     body {
         background-image: url(./images/bg-top.svg);
+        background-size: 50% 100vh;
+        background-position: top right;
     }
     .main__container {
         flex-direction: column;
         align-items: center;
         flex-wrap: wrap;
     }
+    .option-box:nth-child(2) {
+        background-image: linear-gradient(to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+    }
+    .option-box:nth-child(2) h2,.option-box:nth-child(2) h3,.option-box:nth-child(2) p {
+        color: white;
+    }
+    .option-box:nth-child(2) hr {
+        border: 0.1px solid white;
+    }
+    .option-box:nth-child(2) .btn {
+        background-image: linear-gradient(to right, hsl(0, 0%, 100%), hsl(0, 0%, 100%));
+    }
+    .option-box:nth-child(2) .btn p {
+        color: hsl(237, 63%, 64%);
+    }
+    .option-box:last-child {
+        margin-bottom: 5vh;
+    }
+}
