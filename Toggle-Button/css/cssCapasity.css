@@ -1,0 +1,110 @@
+body{
+background-color: hsl(234, 14%, 74%);
+font-family: 'Montserrat', sans-serif;
+font-size: 15px;
+}
+.capacityBox{
+    box-shadow: 5px 10px 18px #888888;
+    background-color:hsl(240, 78%, 98%);
+    position: relative;
+    height: 500px;
+    width: 90%;
+    margin-top: 1.5%; 
+    margin-right: 5%;
+    margin-left: 5%;
+    margin-bottom: 10%px;
+    display: flex;
+    justify-content: center;
+    background-image: url(/images/bg-bottom.svg),url(/images/bg-top.svg);
+    background-repeat: no-repeat, no-repeat;
+    background-position: left bottom, right top;
+}
+.toggleBox{ 
+    /* topBox */
+    position: absolute;
+    height: 130px;
+    width: 100%;
+    margin-top: 20px;
+    text-align: center;
+    align-items: center;
+}
+.dealsBox{
+    /* underBbox */
+    top:150px;
+    position: relative;
+    height: 350px;
+    width: 100%;
+    bottom: 0%;
+    display: flex;
+}
+.circleBox{
+    /* bottomLeft */
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    height: 100px;
+    width: 300px;
+    bottom:0;
+    left: 2.5%;
+    z-index: -1;
+}
+.attribution {
+    font-size: 11px; 
+    text-align: center;
+ }
+.attribution a { 
+    position: relative;
+    display: inline-block;
+    padding-top: 20px;
+    color: hsl(228, 45%, 44%); 
+
+}
+
+.toggleMain .subjectDeal{
+    color:rgba(167, 159, 159, 0.822);
+
+}
+
+@media only screen and (max-width: 376px) {
+    body {
+        background-color:hsl(240, 78%, 98%);
+        display: flex;
+        justify-content: center;
+        background-image: url(/images/bg-top.svg);
+        background-repeat:  no-repeat;
+        background-position:  right top;
+    }
+    .capacityBox{
+        box-shadow: none;
+        background-color:transparent;
+        position: absolute;
+        height: none;
+        width: none;
+        margin-top: none; 
+        margin-right: none;
+        margin-left: none;
+        margin-bottom: none;
+        display: flex;
+        justify-content: none;
+        background-image: none;
+        background-repeat: none;
+        background-position: none;
+    }
+
+    .dealsBox{
+        /* underBbox */
+        position: absolute;
+        height: 250px;
+        width: 100%;
+        bottom: 0%;
+        display: flex;
+        flex-direction: column; 
+        top:180px;
+
+    }
+    .attribution{
+        position: fixed;
+        bottom: 0%;
+        right:11%
+    }
+  }
