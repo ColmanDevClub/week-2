@@ -157,14 +157,16 @@ input:checked ~.bottom-flex-container .basic-div .price-div .basic-price::before
     content:'19.99';    
 }
 input:checked ~.bottom-flex-container .pro-div .price-div .pro-price::before{
-    content:'29.99';    
+    content:'24.99';    
 }
 input:checked ~.bottom-flex-container .master-div .price-div .master-price::before{
     content:'39.99';    
 }
 
+
+
 /*mobile*/
-@media (max-width:500px){
+@media (max-width:600px){
     *{
         margin:0px;
         padding:0px;
@@ -182,28 +184,21 @@ input:checked ~.bottom-flex-container .master-div .price-div .master-price::befo
         background-image:url('./images/bg-top.svg'), url('./images/bg-bottom.svg');
         background-repeat: no-repeat, no-repeat;
         background-position: right top, left bottom;
-        display:flex;
-        justify-content: center;
-        align-items: center;    
         font-family: 'Montserrat';
     }
     .flex-container{
         display: flex;
         flex-direction: column;
-        justify-content:space-around;
+        justify-content:center;
         width:80%;
         height:80%;
         margin:auto;
         text-align:center;
     }
-    .top-flex-container{
-        flex:1;
-    }
     .bottom-flex-container{
-        flex:3;
         display: flex;
         justify-content: center;
-        align-items: baseline;
+        align-items: center;
         flex-direction: column;
     }
     
