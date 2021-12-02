@@ -35,11 +35,7 @@ body {
   right: 0px;
   top: 0px;
 }
-.main-section {
-  display: flex;
-  align-items: baseline;
-  justify-content: center;
-}
+/* -=-=-=-=- Button Section -=-=-=-=- */
 .button-section {
   position: absolute;
   display: flex;
@@ -95,6 +91,14 @@ body {
 .toggle-btn:checked ~ .main-section .box .p3::after {
   content: "39.99";
 }
+/* -=-=-=-=- -=-=-=-=- */
+
+/* -=-=-=-=- Main Section -=-=-=-=- */
+.main-section {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+}
 .box {
   display: flex;
   flex-direction: column;
@@ -120,32 +124,6 @@ hr {
   margin: 0;
   width: 300px;
   opacity: 50%;
-}
-.prices {
-  font-size: 75px;
-  color: hsl(232, 13%, 33%);
-}
-.box-blue .prices {
-  color: white;
-}
-.prices {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 5px;
-}
-.prices::before {
-  content: "$";
-  font-size: 40px;
-}
-.p1::after {
-  content: "199.99";
-}
-.p2::after {
-  content: "249.99";
-}
-.p3::after {
-  content: "399.99";
 }
 .learn-more {
   background: linear-gradient(to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
@@ -175,7 +153,38 @@ hr {
   background: none;
   border-color: white;
 }
-/* <--! Phone Screen !--> */
+/* -=-=-=-=- -=-=-=-=- */
+
+/* -=-=-=-=- Prices -=-=-=-=- */
+.prices {
+  font-size: 75px;
+  color: hsl(232, 13%, 33%);
+}
+.box-blue .prices {
+  color: white;
+}
+.prices {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+.prices::before {
+  content: "$";
+  font-size: 40px;
+}
+.p1::after {
+  content: "199.99";
+}
+.p2::after {
+  content: "249.99";
+}
+.p3::after {
+  content: "399.99";
+}
+/* -=-=-=-=- -=-=-=-=- */
+
+/* -=-=-=-=- Phone Screen -=-=-=-=- */
 @media screen and (max-width: 375px) {
     body {
     width: 100%;
@@ -210,3 +219,4 @@ hr {
     visibility: hidden;
   }
 }
+/* -=-=-=-=- -=-=-=-=- */
