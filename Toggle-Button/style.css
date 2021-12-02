@@ -34,9 +34,12 @@ header {
     align-items: center;
     height: 30vh;
 }
-.toggle-container {
+.month-year-container {
     display: flex;
     align-items: center;
+}
+.month-year-container p {
+    margin: 0px 40px;
 }
 header p {
     color:  hsl(234, 14%, 74%);
@@ -46,6 +49,8 @@ header p {
 #toggle__checkbox {
     margin: 0px 15px;
     position: relative;
+    top: -115px;
+    left: 450px;
     width: 55px;
     height: 30px;
     -webkit-appearance: none;
@@ -70,11 +75,35 @@ header p {
     transition: .2s;
 }
 
+/***** changing price ******/
 
+#toggle__checkbox:checked + .option-box h3::after {
+    content: '$199.99';
+} 
+
+.option-box:first-of-type h3::after {
+    content: '$19.99';
+} 
+.option-box h3::after {
+    content: '$29.99';
+} 
+.option-box:last-child h3::after {
+    content: '$39.99';
+} 
+#toggle__checkbox:checked ~ .option-box:first-of-type h3::after {
+    content: '$199.99';
+} 
+#toggle__checkbox:checked ~ .option-box h3::after {
+    content: '$249.99';
+} 
+#toggle__checkbox:checked ~ .option-box:last-child h3::after {
+    content: '$399.99';
+} 
 
 
 /***** main *****/
 main {
+    margin-top: 10px;
     display: flex;
     width: 100vw;
     justify-content: center;
@@ -92,8 +121,8 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 50vh;
-    width: 35vh;
+    height: 350px;
+    width: 300px;
     border-radius: 10px;
     background-color: white;
     box-shadow: 0px 0px 50px hsla(237, 63%, 64%, 0.226);
@@ -161,19 +190,19 @@ main {
         align-items: center;
         flex-wrap: wrap;
     }
-    .option-box:nth-child(2) {
+    .option-box:nth-child(3) {
         background-image: linear-gradient(to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
     }
-    .option-box:nth-child(2) h2,.option-box:nth-child(2) h3,.option-box:nth-child(2) p {
+    .option-box:nth-child(3) h2,.option-box:nth-child(3) h3,.option-box:nth-child(3) p {
         color: white;
     }
-    .option-box:nth-child(2) hr {
+    .option-box:nth-child(3) hr {
         border: 0.1px solid white;
     }
-    .option-box:nth-child(2) .btn {
+    .option-box:nth-child(3) .btn {
         background-image: linear-gradient(to right, hsl(0, 0%, 100%), hsl(0, 0%, 100%));
     }
-    .option-box:nth-child(2) .btn p {
+    .option-box:nth-child(3) .btn p {
         color: hsl(237, 63%, 64%);
     }
     .option-box:last-child {
