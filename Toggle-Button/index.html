@@ -5,48 +5,73 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | [Challenge Name Here]</title>
+  <link rel="stylesheet" href="./style/style.css">
+  <title>Frontend Mentor | [Toggle-Button]</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
-<body>
+  <body>
+    <main>
+      <section id="main-box">
+        <h1 id="head-title">Our Pricing</h1>
+        <!-- Toggle Switch -->
 
-  Our Pricing
-  Annually
-  Monthly
+        <label id="switch-label-left">Annually</label>
+        <section class="switch">
+        <input type="checkbox" checked id="toggle-one">
+          <label class="slider"></label>
+        </section>
+        <label id="switch-label-right">Monthly</label>
 
-  Basic
-  &dollar;19.99
-  &dollar;199.99
-  500 GB Storage
-  2 Users Allowed
-  Send up to 3 GB
-  Learn More
+        <img id="top-wave" src="./images/bg-top.svg" alt="top-wave">
 
-  Professional
-  &dollar;24.99
-  &dollar;249.99
-  1 TB Storage
-  5 Users Allowed
-  Send up to 10 GB
-  Learn More
+        <!-- Professional plan box -->
+        <section id="boxes-container">
+          <section id="main-blue-box">
+            <h3 class="white-text">Professional</h3>
+            <h1 class="white-text">$<span class="price-text">24.99</span></h1>
+            <hr>
+            <h3 class="white-text">1 TB Storage</h3>
+            <hr>
+            <h3 class="white-text">5 Users Allowed</h3>
+            <hr>
+            <h3 class="white-text">Send up to 10 GB</h3>
+            <hr>
+            <button class="mid-button">LEARN MORE</button>
+          </section>
 
-  Master
-  &dollar;39.99
-  &dollar;399.99
-  2 TB Storage
-  10 Users Allowed
-  Send up to 20 GB
-  Learn More
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+          <!-- Basic plan box -->
+          <section class="side-box-design" id="left-box">
+            <h3>Basic</h3>
+            <h1>$<span class="price-text">19.99</span></h1>
+            <hr>
+            <h3>500 GB Storage</h3>
+            <hr>
+            <h3>2 Users Allowed</h3>
+            <hr>
+            <h3>Send up to 3 GB</h3>
+            <hr>
+            <button class="boxes-button">LEARN MORE</button>
+          </section>
+
+          <!-- Master plan box -->
+          <section class="side-box-design" id="right-box">
+            <h3>Master</h3>
+            <h1>$<span class="price-text">39.99</span></h1>
+            <hr>
+            <h3>2 TB Storage</h3>
+            <hr>
+            <h3>10 Users Allowed</h3>
+            <hr>
+            <h3>Send up to 20 GB</h3>
+            <hr>
+            <button class="boxes-button">LEARN MORE</button>
+          </section>
+        </section>
+
+        <img id="bottom-wave" src="./images/bg-bottom.svg" alt="bottom-wave">
+
+      </section>
+    </main>
+    <footer id="bottom-dots"></footer>
 </body>
 </html>
