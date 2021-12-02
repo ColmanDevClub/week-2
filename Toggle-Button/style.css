@@ -1,8 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
+
+
 body{
     background-color: hsl(240, 78%, 98%);  
 }
 .header{
     text-align: center;
+}
+.AnnuallyMonthly{
+    display: flex;
+    flex-direction:row;
+    text-align: center;
+    align-items: center;
+    display: inline-flex;
 }
 .BoxsAnnually{
     display: flex;
@@ -11,40 +23,44 @@ body{
 .box1{
     position:absolute;
     background-color: white;
-    top:20%;
+    top:22%;
     left: 20%;
-    width: 20%;
-    height: 60%;
-    text-align: center;
-    border-radius: 5%;
-    order: 1;
-}
-
-.box2{
-    position:absolute;
-    background: linear-gradient(hsl(236, 72%, 79%)  25%,hsl(237, 63%, 64%) 100%);
-    left: 40%;
     width: 20%;
     height: 65%;
     text-align: center;
     border-radius: 5%;
+    order: 1;
+    box-shadow: 0 0 20px #a4c6ce50;
+}
+
+.box2{
+    position: absolute;
+    background: linear-gradient(hsl(236, 72%, 79%) 25%,hsl(237, 63%, 64%) 100%);
+    left: 40%;
+    width: 20%;
+    height: 70%;
+    text-align: center;
+    border-radius: 10px;
     order: 2;
+    box-shadow: 0 0 20px #a4c6ce50;
 }
 .box3{
     position:absolute;
     background-color: white;
-    top:20%;
+    top:22%;
     left: 60%;
     width: 20%;
-    height: 60%;
+    height: 65%;
     text-align: center;
     border-radius: 5%;
     order: 3;
+    box-shadow: 0 0 20px #a4c6ce50;
 }
 .text2{
     width: 80%;
     display: inline-table;
-    margin-top: 40px;
+    margin-top: 34px;
+    color: white;
 }
 .text1,.text3{
     width: 80%;
@@ -59,14 +75,14 @@ body{
     width: 10rem;
     height: 2rem;
     cursor: pointer;
+    font-family: "Montserrat";
+    
    
 }
-.btn1:hover{
-
-    background-color:black ;
-   
+.btn1:hover,.btn3:hover{
+    background:hsl(236, 72%, 79%);
+    color:hsl(237, 63%, 64%);
 }
-/*
 .btn2{
     border-radius:10px;
     background: white;
@@ -74,5 +90,66 @@ body{
     border-style: none;
     width: 10rem;
     height: 2rem;
+    color:hsl(237, 63%, 64%);
+    font-weight: bold;
+    cursor: pointer;
+    font-family: "Montserrat";
 }
-*/
+.btn2:hover{
+    background: hsl(236, 72%, 79%) ;
+    color:white;
+}
+h1{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 40px;
+}
+h2{
+    font-family: 'Montserrat', sans-serif;
+}
+h3,h4{
+    font-family: "Montserrat";
+}
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    display: block;
+    margin-top: 500px;
+}
+input[type="checkbox"] {
+    width: 0;
+    height: 0;
+    visibility: hidden;
+}
+label {
+    display: block;
+    width: 70px;
+    height: 35px;
+    margin-right: 10px;
+    margin-left: 10px;
+    background-color: hsl(237, 63%, 64%);
+    border-radius: 100px;
+    position: relative;
+    cursor: pointer;
+    transition: 0.5s;
+}  
+label::after {
+    content: "";
+    width: 22px;
+    height: 22px;
+    background-color: white;
+    position: absolute;
+    border-radius: 70px;
+    top: 7px;
+    left: 7px;
+    transition: 0.5s;
+}
+input:checked + label:after {
+    left: calc(100% - 10px);
+    transform: translateX(-100%);
+}
+input:checked + label {
+    background-color: hsl(237, 63%, 64%);
+}
+
+    
+
