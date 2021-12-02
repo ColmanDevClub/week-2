@@ -58,26 +58,23 @@ hr {
 
 
 /***** changing price ******/
-#toggle__checkbox:checked + .main__container .option-box h3::after {
+.option-box:first-of-type h3::after {
     content: '$199.99';
-} 
-.option-box:first-of-type .main__container h3::after {
-    content: '$19.99';
 } 
 .option-box h3::after {
-    content: '$29.99';
-} 
-.option-box:last-child h3::after {
-    content: '$39.99';
-} 
-#toggle__checkbox:checked ~ .main__container .option-box:first-of-type h3::after {
-    content: '$199.99';
-} 
-#toggle__checkbox:checked ~ .main__container .option-box h3::after {
     content: '$249.99';
 } 
-#toggle__checkbox:checked ~ .main__container .option-box:last-child h3::after {
+.option-box:last-child h3::after {
     content: '$399.99';
+} 
+#toggle__checkbox:checked ~ .main__container .option-box:first-of-type h3::after {
+    content: '$19.99';
+} 
+#toggle__checkbox:checked ~ .main__container .option-box h3::after {
+    content: '$29.99';
+} 
+#toggle__checkbox:checked ~ .main__container .option-box:last-child h3::after {
+    content: '$39.99';
 } 
 
 
