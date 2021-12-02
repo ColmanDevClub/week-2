@@ -1,0 +1,254 @@
+html{
+    width: 1440px;
+    height:100%;
+}
+
+body{
+    width: 100%;
+    height: 100%;
+    font-family: 'Montserrat';
+}
+
+.contain{
+    position: relative;
+    left:50%;
+    top: 160px;
+}
+
+.contain .content{
+    display: none;
+    margin-top:20px;
+}
+
+.contain .content.content-man{
+    display: block;
+}
+
+.check{
+    position: relative;
+    width: 50px;
+}
+
+.check::before{
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 25px;
+    background: #333;
+    border-radius: 25px;
+
+}
+
+.check:checked::before{
+    background: #00a1ff;
+}
+
+.check::after{
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    background: #fff;
+    border-radius: 25px;
+    transition: 0.25s;
+    border:2px solid #333;
+    box-sizing: border-box;
+
+}
+
+.check:checked::after{
+    left:25px;
+    border:2px solid #333;
+}
+
+.check:checked ~ sub-container.child:nth-child(1){
+    display: none;
+}
+
+.check:checked ~ sub-container.child:nth-child(2){
+    display: none;
+}
+
+.manually{
+    color: #333;
+
+}
+
+.annualy{
+    color: #00a1ff;
+}
+
+.container{
+    position:relative;
+    width: 100%;
+    height: 100%;
+    margin:0;
+    background-color: hsl(240, 78%, 98%);
+}
+
+
+.box{
+    position:absolute;
+    width: 73%;
+    height: 90%;
+    left:160px;
+    bottom:110px;
+}
+
+.bottom-bg{
+    position:absolute;
+    height: 40%;
+
+    bottom:0;
+    left:0;
+}
+
+.top-bg{
+    position:absolute;
+    height: 80%;
+    right:0;
+}
+
+
+
+.sub-container{
+    display: flex;
+    position: absolute;
+    align-items: center;
+    height: 70%;
+    bottom:0;
+}
+
+.child{
+    width: 370px;
+    height: 90%;
+    border-radius: 15px;
+}
+
+.child{
+    background-color: white;
+ 
+}
+
+
+
+.child h1{
+    color:hsl(233, 13%, 49%);
+    text-align: center;
+    font-size: 15px;
+    margin-top:25px;
+}
+
+.child  h2{
+    color:hsl(232, 13%, 33%);
+    text-align: center;
+    font-size: 50px;
+    margin-top:25px;
+}
+
+.child h2::before{
+    content: '$';
+    position: relative;
+    bottom:3px;
+    right:4px;
+    color:hsl(232, 13%, 33%);
+    font-size: 30px;
+}
+
+.child h3{
+    color:hsl(233, 13%, 49%);
+    text-align: center;
+    font-size: 15px;
+    margin:10px;
+}
+
+.child:nth-child(2)
+{
+    background:linear-gradient(hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+    height: 100%;
+
+  
+}
+
+.line{
+    position: relative;
+    height:3px;
+    width:80%;
+    background-color: hsl(240, 78%, 98%);
+    left:30px;
+}
+
+.button{
+    width: 75%;
+    height:30px;
+    background:linear-gradient(hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+    position:relative;
+    color:white;
+    border-radius: 5px;
+    left:12%;
+    top:30px;
+    border: none;
+    font-family: 'Montserrat';
+    font-weight: 700;
+}
+
+.button:hover{
+    color:red;
+}
+
+/*------------------------------CHILD2: PRO---------------------------*/
+
+.child:nth-child(2) h1{
+    color:hsl(240, 78%, 98%);
+    text-align: center;
+    font-size: 15px;
+    margin-top:45px;
+}
+
+.child:nth-child(2)  h2{
+    color:hsl(240, 78%, 98%);
+    text-align: center;
+    font-size: 50px;
+    margin-top:25px;
+}
+
+.child:nth-child(2) h2::before{
+    position: relative;
+    bottom:3px;
+    right:4px;
+    content: '$';
+    color:hsl(240, 78%, 98%);
+    font-size: 30px;
+}
+
+.child:nth-child(2) h3{
+    color:hsl(240, 78%, 98%);
+    text-align: center;
+    font-size: 15px;
+    margin:10px;
+}
+
+.child:nth-child(2) .button{
+    width: 75%;
+    height:30px;
+    background: white;
+    color:hsl(237, 63%, 64%);
+    position:relative;
+    border-radius: 5px;
+    left:12%;
+    top:30px;
+    border: none;
+}
+
+.child:nth-child(2) .button:hover{
+    color:red;
+}
+
+
+/*------------------------------------------------------------------*/
+
+
+
+
+
+
