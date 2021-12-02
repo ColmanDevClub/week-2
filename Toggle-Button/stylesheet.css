@@ -1,0 +1,332 @@
+
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Raleway:wght@100&display=swap");
+
+html {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+body
+
+{
+  font-family:"Montserrat";
+  font-weight: 700px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-size:15px;
+    background-color: hsl(240, 78%, 98%);
+    background-image: url(images/bg-top.svg),url(images/bg-bottom.svg);
+    background-position:right top,left bottom;
+    background-repeat: no-repeat;
+    color: hsl(234, 14%, 74%);
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    margin: 0;
+    display: grid;
+    
+   
+}
+
+.p1 
+{
+  top:74px;
+  bottom:0px;
+  right:0;
+  left:300px;
+  display: inline-block;
+  position: relative;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  border-color: none;
+}
+.p2
+{
+  top:45px;
+  bottom:0px;
+  right:0;
+  left:480px;
+  display: inline-block;
+  position: relative;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  border-color: none;
+}
+.container
+{
+  margin: 0 auto;
+  max-width: 1210px;
+}
+.site
+{
+  text-align: center;
+  padding:70px 20px;
+
+}
+.title
+{
+  font-size:32px;
+  color:hsl(232, 13%, 33%);
+  top:90px;
+  bottom:400px;
+  right:0;
+  left:350px;
+  display: inline-block;
+  position: relative;
+}
+label 
+{
+  position: absolute;
+  background: linear-gradient( to bottom,hsl(236, 72%, 79%),hsl(237, 63%, 64%));
+  border-radius: 20px;
+  top:0;
+  bottom:0;
+  right:0;
+  left:400px;
+  display: inline-block;
+  width: 60px;
+  height: 30px;
+  position: relative;
+}
+label:hover
+{
+  background: hsl(236, 72%, 79%);
+}
+label::before
+{
+  content: '';
+  position: absolute;
+  background-color: white;
+  border-radius: 50px;
+  width: 25px;
+  height: 25px;
+  left:4px;
+  top:2px;
+ 
+}
+input:checked + label::before
+{
+  
+  transform: translate(26px);
+
+}
+
+.n1::after
+{
+  content: '19.99';
+}
+
+.n2::after
+{
+  content: '24.99';
+}
+.n3::after
+{
+  content: '39.99';
+}
+input:checked ~.container .site .boxes .price-left .price.n1::after 
+{
+  content: '199.99';
+}
+input:checked ~.container .site .boxes .price-middle-pro .price.n2::after 
+{
+  content: '249.99';
+}
+
+input:checked ~.container .site .boxes .price-right .price.n3::after 
+{
+  content: '399.99';
+}
+
+
+.visually-hidden {
+  position: absolute;
+  left: -100vw;
+  
+  /* Note, you may want to position the checkbox over top the label and set the opacity to zero instead. It can be better for accessibilty on some touch devices for discoverability. */
+}
+
+
+.boxes
+{
+  display: flex;
+  flex-direction:row;
+  text-align: center;
+  justify-content: space-between;
+  align-items: center;
+  border-color: none;
+ 
+ 
+  
+}
+.price-middle-pro
+{
+  flex:2;
+  background:linear-gradient(to bottom,hsl(236, 72%, 79%),hsl(237, 63%, 64%));
+  border-radius:4%;
+  color:white;
+  padding:60px 60px;
+
+}
+.price-left
+{
+ flex:1;
+ background-color: white;
+ border-radius:4%;
+ color: hsl(233, 13%, 49%);
+ padding:20px 20px;
+ 
+}
+.price-right
+{
+  flex:1;
+  box-shadow:0 0px 1px;
+  background-color: white;
+  border-radius:4%;
+  color: hsl(233, 13%, 49%);
+  padding:20px 20px;
+ 
+}
+.price
+{
+    font-size:32px;
+    color: hsl(233, 13%, 49%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.n2
+{
+    font-size:32px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+
+.price
+{
+font-size:65px;
+color: hsl(233, 13%, 49%);
+      
+}
+.n2
+{
+font-size:65px;
+color:white;
+      
+}
+.box-kind
+{
+font-size:18px;
+display: flex;
+align-items: center;
+justify-content:center;
+color:hsl(232, 13%, 33%);
+}
+.box-kind-pro
+{
+font-size:18px;
+display: flex;
+align-items: center;
+justify-content:center;
+color:white;
+}
+
+
+ul
+{
+    list-style-type: none;
+    padding: 35px;
+   
+}
+ul li
+{
+border-bottom: 1px solid hsl(234, 14%, 74%);
+padding: 15px 0px;
+align-items: center;
+left:100px;
+right: 300px;
+}
+ul li:first-child
+{
+    border-bottom: 1px solid hsl(234, 14%, 74%);
+}
+.pro ul
+{
+border-bottom: 1px solid white;
+padding: 14px 2px;
+color :white;
+}
+.learn-more
+{
+  width: 200px;
+  height: 50px;
+  position: relative;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  background:linear-gradient( to bottom,hsl(236, 72%, 79%),hsl(237, 63%, 64%));
+  color:white;
+  border-color:hsl(237, 63%, 64%);
+}
+.learn-more:hover
+{
+  background: transparent;
+  background-color: hsl(237, 63%, 64%);
+  border-color:hsl(237, 63%, 64%);
+}
+.learn
+{
+  width: 200px;
+  height: 50px;
+  position:relative;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  background-color:white;
+  border-color: white;
+  color:hsl(237, 63%, 64%);
+}
+.learn:hover
+{
+  background:hsl(237, 63%, 64%);
+  color: white;
+  border-color: hsl(237, 63%, 64%);;
+}
+@media only screen and (min-width: 500px) {
+  .characters {
+    width: 480px;
+  }
+}
+
+@media only screen and (min-width: 740px) {
+  .characters {
+    width: 720px;
+  }
+
+  h1 {
+    font-size: 60px;
+  }
+}
+
+@media only screen and (min-width: 980px) 
+{
+  .characters 
+  {
+    width: 960px;
+  }
+}
+  
