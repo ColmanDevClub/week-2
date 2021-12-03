@@ -48,7 +48,7 @@ body{
 .slider:hover{
     background: hsl(236, 72%, 79%);
 }
-.slider:before{
+.slider::before{
     content: '';
     position: absolute;
     height: 25px;
@@ -59,9 +59,8 @@ body{
     left: 4px;
     transition: all .4s ease-in-out;
 }
-input:checked+ .slider:before{
+input:checked+ .slider::before{
     transform: translateX(26px);
-
 }
 .pricing{
     color: hsl(234, 14%, 74%);
@@ -152,6 +151,36 @@ a:hover{
     border-color: white;
     background: transparent;
 }
+@media only screen and (max-width:1440) {
+    body{
+        font-size: 14px;
+    }
+    .price{
+        font-size: 50px;
+    }
+    .box{
+        padding: 40px 30px;
+    }
+    .box.between{
+        padding: 70px 30px;
+    }
+  }
+  @media only screen and (max-width:375) {
+    .pricingMain{
+        grid-template-columns: 1fr;
+        row-gap: 30px;
+    }
+    .price{
+        font-size: 50px;
+    }
+    .box{
+        padding: 50px;
+    }
+    .box.between{
+        padding: 50px;
+        transform: scaleX(1);
+    }
+  }
 
 
 
