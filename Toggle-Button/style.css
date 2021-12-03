@@ -8,13 +8,12 @@ html{
     width:100%;    
 }
 h1,h2,h3,h4,h5,h6{
-    margin:10px;
+    padding:10px;
 }
 body{
     height:100%;
     background-image:url('./images/bg-top.svg'), url('./images/bg-bottom.svg');
-    background-size:auto;
-    background-repeat: no-repeat, no-repeat;
+    background-repeat: no-repeat;
     background-position: top right, bottom left;
     display:flex;
     align-items: center;    
@@ -57,12 +56,12 @@ body{
     margin: auto;
 }
 .price-div{
-    font-size: 2.5em;
+    font-size: 45px;
     margin:15px auto;
 }
 .learn-btn{
     color:hsl(240, 78%, 98%);
-    background-image: linear-gradient( to right , hsl(236, 72%, 79%) ,hsl(237, 63%, 64%));
+    background-image: linear-gradient(to right , hsl(236, 72%, 79%) ,hsl(237, 63%, 64%));
     border:none;
     border-radius: 5px;
     margin:20px auto;
@@ -76,7 +75,7 @@ body{
 }
 /*pro package style*/
 .pro-div{
-    background-image: linear-gradient( to right , hsl(236, 72%, 79%) ,hsl(237, 63%, 64%));
+    background-image: linear-gradient(to right , hsl(236, 72%, 79%) ,hsl(237, 63%, 64%));
     color:white;
     padding: 40px 20px;
 }
@@ -96,11 +95,11 @@ body{
 /* toggle switch */
 .toggle{
     position: relative;
-    margin: -50px 0px 30px 0px;
+    margin: -40px 0px 20px 0px;
     display: inline-block;
     cursor: pointer;
 }
-.toggle-label{
+.toggle-state{
     margin:10px 50px;
     display: inline-block;
 }
