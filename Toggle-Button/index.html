@@ -12,35 +12,34 @@
   <link rel="stylesheet" href="./style.css">
   <!--style.css Link-->
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
     .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-  -->
+    .attribution a { color: hsl(228, 45%, 44%); }  </style>
+  
 </head>
 <body>
   <div class='flex-container'>    
     <div class='top-flex-container'>      
       <h1>Our Pricing</h1>
-      <label class='toggle-label'>Annually</label>      
-      <label class='toggle-label'>Monthly</label>
+      <p class='toggle-label'>Annually</p>      
+      <p class='toggle-label'>Monthly</p>
     </div>
-
-    <input type='checkbox' id='my-toggle' class='toggle-input'>
-    <label class='toggle' for='my-toggle'>      
+    <input type='checkbox' id='display-toggle' class='toggle-input'>
+    <label class='toggle' for='display-toggle'>      
       <div class='toggle-fill'></div>
     </label>
-
     <div class='bottom-flex-container'>
       <div class='basic-div  plan-div'>
         <h3>Basic</h3>
         <div class='price-div'>
           <div class='basic-price'>&dollar;</div>
         </div>
-        <span class='package-prop'>500 GB Storage</span>
-        <span class='package-prop'>2 Users Allowed</span>
-        <span class='package-prop'>Send up to 3 GB</span>
+        <ul>
+          <li class='package-prop'>500 GB Storage</li>
+          <li class='package-prop'>2 Users Allowed</li>
+          <li class='package-prop'>Send up to 3 GB</li>
+        </ul>
         <button class='learn-btn'>LEARN MORE</button>
       </div>
       <div class='pro-div  plan-div'>
@@ -48,9 +47,11 @@
         <div class='price-div'>
           <div class='pro-price'>&dollar;</div>
         </div>
-        <span class='package-prop'>1 TB Storage</span>
-        <span class='package-prop'>5 Users Allowed</span>
-        <span class='package-prop'>Send up to 10 GB</span>
+        <ul>
+          <li class='package-prop'>1 TB Storage</li>
+          <li class='package-prop'>5 Users Allowed</li>
+          <li class='package-prop'>Send up to 10 GB</li>
+        </ul>
         <button class='learn-btn pro-learn-btn'>LEARN MORE</button>
       </div>
       <div class='master-div  plan-div'>
@@ -58,18 +59,19 @@
         <div class='price-div'>
           <div class='master-price'>&dollar;</div>
         </div>
-        <span class='package-prop'>2 TB Storage</span>
-        <span class='package-prop'>10 Users Allowed</span>
-        <span class='package-prop'>Send up to 20 GB</span>
+        <ul>
+          <li class='package-prop'>2 TB Storage</li>
+          <li class='package-prop'>10 Users Allowed</li>
+          <li class='package-prop'>Send up to 20 GB</li>
+        </ul>
         <button class='learn-btn'>LEARN MORE</button>
       </div>
     </div>
-  </div>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">Oz Gemer</a>.
+    </div>
+  </div>  
   
-  <!--  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>-->
-
 </body>
 </html>
