@@ -110,9 +110,22 @@ body{
     color: white;
 }
 
+.edge button:hover {
+    border: hsl(237, 63%, 64%) 1px solid;
+    background-image: none;
+    background-color: white;
+    color: hsl(237, 63%, 64%);
+}
+
 .middle button {
     background-color: white; 
     color: hsl(237, 63%, 64%);
+}
+
+.middle button:hover {
+    border: white 1px solid;
+    background-image: linear-gradient(hsl(236, 72%, 79%) ,  hsl(237, 63%, 64%));
+    color: white;
 }
 
 .middle p {
@@ -145,8 +158,9 @@ hr {
 }
 
 .checkbox-input:hover {
-background-color: hsl(233, 13%, 49%);
-cursor: pointer;
+    background-image: none;
+    background-color: hsl(234, 14%, 74%);
+    cursor: pointer;
 }
 
 .checkbox-input::before {
