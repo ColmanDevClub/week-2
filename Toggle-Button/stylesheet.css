@@ -34,7 +34,8 @@ body
    
 }
 
-.p1 
+
+.program-tipe1
 {
   top:74px;
   bottom:0px;
@@ -47,7 +48,7 @@ body
   align-items: center;
   border-color: none;
 }
-.p2
+.program-tipe1
 {
   top:45px;
   bottom:0px;
@@ -82,8 +83,7 @@ body
   display: inline-block;
   position: relative;
 }
-label 
-{
+label {
   position: absolute;
   background: linear-gradient( to bottom,hsl(236, 72%, 79%),hsl(237, 63%, 64%));
   border-radius: 20px;
@@ -110,7 +110,6 @@ label::before
   height: 25px;
   left:4px;
   top:2px;
- 
 }
 input:checked + label::before
 {
@@ -119,29 +118,29 @@ input:checked + label::before
 
 }
 
-.n1::after
+.basic::after
 {
   content: '19.99';
 }
 
-.n2::after
+.prof::after
 {
   content: '24.99';
 }
-.n3::after
+.master::after
 {
   content: '39.99';
 }
-input:checked ~.container .site .boxes .price-left .price.n1::after 
+input:checked ~.container .site .boxes .price-left .price.basic::after 
 {
   content: '199.99';
 }
-input:checked ~.container .site .boxes .price-middle-pro .price.n2::after 
+input:checked ~.container .site .boxes .price-middle-pro .price.prof::after 
 {
   content: '249.99';
 }
 
-input:checked ~.container .site .boxes .price-right .price.n3::after 
+input:checked ~.container .site .boxes .price-right .price.master::after 
 {
   content: '399.99';
 }
@@ -306,13 +305,21 @@ color :white;
   color: white;
   border-color: hsl(237, 63%, 64%);;
 }
-@media only screen and (min-width: 500px) {
-  .characters {
-    width: 480px;
+
+@media only screen and (min-width: 980px) 
+{
+  body{
+   
+  }
+  .characters 
+  {
+    width: 960px;
   }
 }
-
 @media only screen and (min-width: 740px) {
+  body{
+    
+  }
   .characters {
     width: 720px;
   }
@@ -321,12 +328,44 @@ color :white;
     font-size: 60px;
   }
 }
+@media only screen and (max-width: 500px) {
+  .boxes{
+    display: block;
+    position: relative;
+    left:200px;
+    right: 200px;
+    
 
-@media only screen and (min-width: 980px) 
-{
-  .characters 
+  }
+  
+  .p1
   {
-    width: 960px;
+    left:120px;
+  }
+  .p1
+  {
+    right:20px;
+  }
+  .visually-hidden
+
+  {
+    right:20px;
+  }
+
+ 
+  .header
+  {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .characters {
+    width: 480px;
   }
 }
+
+
+
+
   
