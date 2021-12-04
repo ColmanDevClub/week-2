@@ -1,0 +1,39 @@
+.unique-card {
+    display: inline-block;
+    background: linear-gradient(hsl(236, 72%, 79%)  25%,hsl(237, 63%, 64%) 100%);
+    width: 330px;
+    height: 550px;
+    border-radius: 8px;
+}
+.unique-card h1 {
+    color: white;
+}
+.unique-card {
+    color: white;
+    background-color: transparent;
+}
+.unique-card h5 {
+    border-color: white;
+}
+.unique-card h5:first-of-type {
+    border-color: white;
+}
+.unique-card h6 {
+    margin-top: 61.6px;
+}
+.unique-card div {
+    background: white;
+    margin-top: 25px;
+    width: 80%;
+    padding: 10px 0 10px 0;
+    border-radius: 6px;
+    font-size: small;
+    color: hsl(237, 63%, 64%);
+    background: white;
+}
+.unique-card div:hover {
+    cursor: pointer;
+    border: 1px solid white;
+    background: transparent;
+    color: white;
+}
