@@ -1,52 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | [Challenge Name Here]</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link rel="stylesheet" href="./style/style.css">
+    <title>Frontend Mentor | [Toggle-Button]</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+  </head>
+  <body>
 
-  Our Pricing
-  Annually
-  Monthly
+    <img id="top-wave" src="./images/bg-top.svg" alt="top-wave">
+    <img id="bottom-wave" src="./images/bg-bottom.svg" alt="bottom-wave">
 
-  Basic
-  &dollar;19.99
-  &dollar;199.99
-  500 GB Storage
-  2 Users Allowed
-  Send up to 3 GB
-  Learn More
+    <!-- Professional plan box -->
+    <main id="boxes-container">
+      <section class="top-page">
+        <div class="top-flex">
+          <h1 id="head-title">Our Pricing</h1>
+          <!-- Toggle Switch -->
+          <label id="switch-label-left">Annually</label>
+          <label class="switch">
+            <input type="checkbox" checked id="toggle-one">
 
-  Professional
-  &dollar;24.99
-  &dollar;249.99
-  1 TB Storage
-  5 Users Allowed
-  Send up to 10 GB
-  Learn More
-
-  Master
-  &dollar;39.99
-  &dollar;399.99
-  2 TB Storage
-  10 Users Allowed
-  Send up to 20 GB
-  Learn More
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+            <section class="subscription-plans">
+              <section id="main-blue-box">
+                <h3 class="white-text" id="box-header">Professional</h3>
+                <h1 class="white-text" id="box-price"><span class="dollar-design-mid">$</span><span class="price-text prof-monthly">24.99</span>
+                <span class="price-text prof-annually">249.99</span></h1>
+                <hr>
+                <h3 class="white-text">1 TB Storage</h3>
+                <hr>
+                <h3 class="white-text">5 Users Allowed</h3>
+                <hr>
+                <h3 class="white-text">Send up to 10 GB</h3>
+                <hr>
+                <button class="mid-button">LEARN MORE</button>
+              </section>
+        
+              <!-- Basic plan box -->
+              <section class="side-box-design" id="left-box">
+                <h3 id="box-header">Basic</h3>
+                <h1 id="box-price" class="gray-text"><span class="dollar-design-sides">$</span><span class="price-text basic-monthly">19.99</span>
+                  <span class="price-text basic-annually">199.99</span></h1>
+                <hr>
+                <h3>500 GB Storage</h3>
+                <hr>
+                <h3>2 Users Allowed</h3>
+                <hr>
+                <h3>Send up to 3 GB</h3>
+                <hr>
+                <button class="boxes-button">LEARN MORE</button>
+              </section>
+        
+              <!-- Master plan box -->
+              <section class="side-box-design" id="right-box">
+                <h3 id="box-header">Master</h3>
+                <h1 id="box-price" class="gray-text"><span class="dollar-design-sides">$</span><span class="price-text master-monthly">39.99</span>
+                  <span class="price-text master-annually">399.99</span></h1>
+                <hr>
+                <h3>2 TB Storage</h3>
+                <hr>
+                <h3>10 Users Allowed</h3>
+                <hr>
+                <h3>Send up to 20 GB</h3>
+                <hr>
+                <button class="boxes-button">LEARN MORE</button>
+              </section>
+            </section>
+          </label>
+          <label id="switch-label-right">Monthly</label>
+        </div>
+      </section>
+    </main>
+  </body>
 </html>

@@ -1,0 +1,295 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;600;700&family=Raleway:wght@100&display=swap');
+body{
+    display:flex;
+    position:relative;
+    font-size: 15px;
+    background-color:hsl(240, 78%, 98%);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    margin:0;
+    padding:0;
+    height:100%;
+
+}
+
+hr{
+    width:80%;
+}
+
+.white-text{
+    color:#fff;
+}
+
+.gray-text{
+    color:hsl(232, 13%, 33%);
+}
+
+.price-text{
+    font-size:70px;
+}
+
+h3{
+    color: hsl(233, 13%, 49%);
+}
+
+#top-wave{
+    position:absolute;
+    right:0;
+}
+
+#bottom-wave{
+    position:absolute;
+    top:700px;
+}
+
+.top-page{
+    position:absolute;
+    height:150px;
+    width:250px;
+    top:-200px;
+    left:25px;
+    
+    
+}
+
+.dollar-design-sides{
+    font-size:40px;
+}
+
+.dollar-design-mid{
+    font-size:40px;
+    padding-right:5px;
+}
+
+.dollar-design-sides{
+    font-size:40px;
+    padding-right:5px;
+}
+
+.top-flex{
+    display:flex;
+    position:relative;
+}
+
+#boxes-container{
+    position:relative;
+    display:flex;
+    top:300px;
+    left:38%;
+    text-align:center;
+}
+
+.side-box-design{
+    position:absolute;
+    width:350px;
+    top:20px;
+    border-radius:10px;
+    height:460px;
+    z-index: 1;
+    background-color: #fff;
+    margin-top:200px;
+}
+
+#right-box{
+    left:310px;
+}
+
+#left-box{
+    left:-340px;
+}
+
+.boxes-button{
+    width:80%;
+    height:35px;
+    background-image: linear-gradient(to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+    color:#fff;
+    border-radius:10px;
+    border:1px solid hsl(237, 63%, 64%);
+    margin-bottom:17px;
+    font-size:12px;
+    font-weight:bold;
+    letter-spacing: 0.03em;
+    margin-top:10px;
+    cursor:pointer;
+}
+
+.mid-button{
+    width:80%;
+    height:35px;
+    background-color: #fff;
+    border-radius:10px;
+    border:1px solid hsl(237, 63%, 64%);
+    margin-top:26px;
+    color:hsl(237, 63%, 64%);
+    font-size:12px;
+    font-weight:bold;
+    letter-spacing: 0.03em;
+    cursor:pointer;
+}
+
+#main-blue-box{
+    border-radius:10px;
+    width:320px;
+    height:500px;
+    background-image: linear-gradient(to bottom right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+    position:absolute;
+    z-index:2;
+    top:200px;
+}
+
+#head-title{
+    position:absolute;
+    font-size:26px;
+    top:0px;
+    left:65px;
+    padding:0;
+    margin:0;
+    color:hsl(232, 13%, 33%);
+}
+
+.slider{
+    position:absolute;
+    cursor:pointer;
+    background-color: #FFF;
+    width:21px;
+    height:21px;
+    left:25px;
+    top:2px;
+    transition:.4s;
+    border-radius:34px;
+
+}
+
+#switch-label-left{
+    position:absolute;
+    font-size:14px;
+    color:hsl(228, 2%, 45%);
+    left:30px;
+    top:80px;
+}
+
+#switch-label-right{
+    position:absolute;
+    font-size:14px;
+    color:hsl(228, 2%, 45%);
+    right:-20px;
+    top:80px;
+}
+
+#box-header{
+    padding-top:30px;
+}
+
+#box-price{
+    padding-bottom:15px;
+}
+
+.prof-annually{
+    display:none;
+}
+
+.basic-annually{
+    display:none;
+}
+
+.master-annually{
+    display:none;
+}
+
+.switch input[type="checkbox"]{
+    -webkit-appearance: none;
+    position:relative;
+    
+}
+
+.switch input[type="checkbox"]::after{
+    content:"";
+    display:block;
+    position:absolute;
+    width: 1rem;
+    height:0.5rem;
+    width:50px;
+    left:125px;
+    top:65px;
+    height:25px;
+    background-image:linear-gradient(to bottom right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+    border-radius:34px;
+}
+
+.switch input[type="checkbox"]::before{
+    content:"";
+    display:block;
+    position:absolute;
+    left:102px;
+    top:67px;
+    width:21px;
+    height:21px;
+    background-color:#fff;
+    border-radius:34px;
+    z-index:1;
+    cursor:pointer;
+    transition: .4s;
+}
+
+.subscription-plans{
+    margin-top:200px;
+    pointer-events:none;
+}
+
+.switch input[type="checkbox"]:checked::before{
+    left:151px;
+}
+
+.switch input[type="checkbox"]:not(:checked)::before{
+    left:128px;
+}
+/* professional button effect */
+.top-page .top-flex input[type="checkbox"]:checked + .subscription-plans #main-blue-box .prof-monthly {
+    display: inline-block;
+}
+
+.top-page .top-flex input[type="checkbox"]:checked + .subscription-plans #main-blue-box .prof-annually {
+    display: none;
+}
+
+.top-page .top-flex input[type="checkbox"]:not(:checked) + .subscription-plans #main-blue-box .prof-monthly {
+    display: none;
+}
+
+.top-page .top-flex input[type="checkbox"]:not(:checked) + .subscription-plans #main-blue-box .prof-annually {
+    display: inline-block;
+}
+
+/* professional button effect */
+.top-page .top-flex input[type="checkbox"]:checked + .subscription-plans #left-box .basic-monthly {
+    display: inline-block;
+}
+
+.top-page .top-flex input[type="checkbox"]:checked + .subscription-plans #left-box .basic-annually {
+    display: none;
+}
+
+.top-page .top-flex input[type="checkbox"]:not(:checked) + .subscription-plans #left-box .basic-monthly {
+    display: none;
+}
+
+.top-page .top-flex input[type="checkbox"]:not(:checked) + .subscription-plans #left-box .basic-annually {
+    display: inline-block;
+}
+
+/* professional button effect */
+.top-page .top-flex input[type="checkbox"]:checked + .subscription-plans #right-box .master-monthly {
+    display: inline-block;
+}
+
+.top-page .top-flex input[type="checkbox"]:checked + .subscription-plans #right-box .master-annually {
+    display: none;
+}
+
+.top-page .top-flex input[type="checkbox"]:not(:checked) + .subscription-plans #right-box .master-monthly {
+    display: none;
+}
+
+.top-page .top-flex input[type="checkbox"]:not(:checked) + .subscription-plans #right-box .master-annually {
+    display: inline-block;
+}
