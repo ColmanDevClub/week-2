@@ -3,50 +3,71 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
+  <link rel="stylesheet" type="text/css" href="style.css">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | [Challenge Name Here]</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <title>Frontend Mentor | Toggle-Button</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
 </head>
 <body>
-
-  Our Pricing
-  Annually
-  Monthly
-
-  Basic
-  &dollar;19.99
-  &dollar;199.99
-  500 GB Storage
-  2 Users Allowed
-  Send up to 3 GB
-  Learn More
-
-  Professional
-  &dollar;24.99
-  &dollar;249.99
-  1 TB Storage
-  5 Users Allowed
-  Send up to 10 GB
-  Learn More
-
-  Master
-  &dollar;39.99
-  &dollar;399.99
-  2 TB Storage
-  10 Users Allowed
-  Send up to 20 GB
-  Learn More
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+  <main>
+    <h1>Our Pricing</h1>
+    <div class="month-year-container">
+      <label class="gray-text" for="toggle__checkbox">Annually</label>
+      <label class="gray-text" for="toggle__checkbox">Monthly</label>
+    </div>
+    <input type="checkbox" name="toggle__checkbox" id="toggle__checkbox">
+    <div class="main__container">
+      <div class="option-box">
+        <h2>Basic</h2>
+        <h3></h3>
+        <div class="option-box__details">
+          <div class="option-box__gray-line"></div>
+          <p>500 GB Storage</p>
+          <div class="option-box__gray-line"></div>
+          <p>2 Users Allowed</p>
+          <div class="option-box__gray-line"></div>
+          <p>Send up to 3 GB</p>
+          <div class="option-box__gray-line"></div>
+        </div>
+        <div class="option-box__btn">
+          <p>LEARN MORE</p>
+        </div>
+      </div>
+      <div class="option-box">
+        <h2>Professional</h2>
+        <h3></h3>
+        <div class="option-box__details">
+          <div class="option-box__gray-line"></div>
+          <p>1 TB Storage</p>
+          <div class="option-box__gray-line"></div>
+          <p>5 Users Allowed</p>
+          <div class="option-box__gray-line"></div>
+          <p>Send up to 10 GB</p>
+          <div class="option-box__gray-line"></div>
+        </div>
+        <div class="option-box__btn">
+          <p>LEARN MORE</p>
+        </div>
+      </div>
+      <div class="option-box">
+        <h2>Master</h2>
+        <h3></h3>
+        <div class="option-box__details">
+          <div class="option-box__gray-line"></div>
+          <p>2 TB Storage</p>
+          <div class="option-box__gray-line"></div>
+          <p>10 Users Allowed</p>
+          <div class="option-box__gray-line"></div>
+          <p>Send up to 20 GB</p>
+          <div class="option-box__gray-line"></div>
+        </div>
+        <div class="option-box__btn">
+          <p>LEARN MORE</p>
+        </div>
+      </div>
+    </div>
+  </main>
 </body>
 </html>
