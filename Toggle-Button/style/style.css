@@ -1,0 +1,180 @@
+* {
+    margin: 0;
+    padding: 0; 
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    background: url(../images/bg-top.svg) right top no-repeat, url(../images/bg-bottom.svg) left bottom no-repeat, hsl(240, 78%, 98%) left top repeat;
+    font-size: 0.9rem;
+    font-family: Montserrat;
+    font-weight: 700; 
+    text-align: center;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2em;
+    flex-direction: column;
+}
+
+/* Header */
+
+h1 {
+    color: hsl(233, 13%, 49%);
+}
+
+.toogle__labels {
+    color: hsl(234, 14%, 74%);
+    display: flex;
+    position: absolute;
+    justify-content: space-between;
+    align-self: center;
+    gap: 8em;
+    top: 160px;
+}
+
+input {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    appearance: none;
+    width: 60px;
+    height: 34px;
+    background: linear-gradient(to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 34px;
+}
+
+input::before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 50%;
+}
+  
+input:checked::before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+/* Main */
+
+main {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: baseline;
+}
+
+.box {
+    border-radius: 8px;
+    padding: 5% 3%;
+    background: white;
+    text-align: center;
+    color: hsl(232, 13%, 33%);
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    gap: 1em;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 5px 20px 0 rgba(0, 0, 0, 0.09);
+    width: 300px;
+}
+
+/* Price Changing */
+
+.box--price {
+    font-size: 4rem;
+    font-weight: 700;
+}
+
+input:checked ~ main .p1::after {
+    content: "19.99";
+}
+
+input:checked ~ main .p2::after {
+    content: "24.99";
+}
+
+input:checked ~ main .p3::after {
+    content: "39.99";
+}
+
+.box--price::before {
+    content: '$';
+    font-size: 3rem;
+}
+
+.p1::after {
+    content: '199.99';
+}
+
+.p2::after{
+    content: '249.99';
+}
+
+.p3::after{
+    content: '399.99';
+}
+
+
+.box__cent {
+    background: linear-gradient(to bottom right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+    color: white;
+    padding: 7% 3%;
+}
+
+hr {
+    opacity: 0.5;
+}
+
+button {
+    border-radius: 5px;
+    height: 2.75em;
+    align-self: stretch;
+    background-color: white;
+    cursor: pointer;
+    color: hsl(237, 63%, 64%);
+    font-weight: 700;
+    border: 0em transparent solid;
+}
+
+.btn__side {
+    background: linear-gradient(to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+    color: white;
+}
+
+@media screen and (max-width: 376px) {
+    body {
+        background: url(../images/bg-top.svg) right top/50% no-repeat,  hsl(240, 78%, 98%) left top repeat;
+        background-clip: border-box;
+    }
+    
+    main {
+        flex-direction: column;
+        gap: 4vh;
+    }
+
+    .toogle__labels {
+        top: 83px;
+    }
+}
+
+/* @media screen and (max-width: 1444px) {
+    .toogle__labels {
+        top: 33.5%;
+    }
+} */
