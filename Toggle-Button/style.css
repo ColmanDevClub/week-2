@@ -20,7 +20,6 @@ body{
     font-family: 'Montserrat';
 }
 .flex-container{
-    width: 80%;
     display: flex;
     flex-direction: column;
     justify-content:space-evenly;
@@ -133,7 +132,7 @@ body{
     transition: transform 0.2s;
     display: inline-block;
 }
-.toggle-input:checked ~ .toggle .toggle-fill::after{ /* when its checked => activate css */
+.toggle-input:checked ~ .toggle .toggle-fill::after{
     transform:translateX(30px);
 }
 /* toggle switch */
@@ -158,7 +157,6 @@ input:checked ~.bottom-flex-container .pro-div .price-div .pro-price::before{
 input:checked ~.bottom-flex-container .master-div .price-div .master-price::before{
     content:'39.99';    
 }
-
 /*mobile*/
 @media (max-width:750px){
    body{
