@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,600;1,700&family=Raleway:ital,wght@1,300&family=Sacramento&display=swap');
+
+#left-background-image{
+    position: absolute;
+    bottom: 0%;
+    left: 0%;
+    z-index: -1;
+}
+#right-background-image{
+    position: absolute;
+    right: 0%;
+    top: 0%;
+    z-index: -1;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.title{
+    text-align: center;
+    padding: 50px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+#check-options{
+    justify-content: space-between;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    color: hsl(233, 13%, 49%);
+}
+
+input[type = "checkbox"]{
+    -webkit-appearance: none;
+    visibility: hidden;
+    display: none;
+}
+
+.check{
+    position: relative;
+    display: block;
+    width: 40px;
+    height: 20px;
+    background: linear-gradient(hsl(236, 72%, 79%),hsl(237, 63%, 64%));
+    cursor: pointer;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: ease-in 0.5s;
+}
+
+input[type = "checkbox"]:checked ~ .check{
+    background: linear-gradient(hsl(236, 72%, 79%),hsl(237, 63%, 64%));
+}
+
+.check::before{
+    content:'';
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    background: #fff;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    transition: 0.5s;
+}
+
+input[type = "checkbox"]:checked ~ .check::before{
+    transform: translateX(-50px);
+}
+
+.check::after{
+    content:'';
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    background: white;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    transition: 0.5s;
+    transform: translateX(-50px);
+}
+
+input[type = "checkbox"]:checked ~ .check::after{
+    transform: translateX(0px);
+}
+
+
+.cash-amount-left::after {
+    content: "$199.99";
+    height: min-content;
+    width: min-content;
+    font-size: 40px;
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+input[type = "checkbox"]:checked ~ .cash-amount-left::after {
+    content: "$19.99";
+    height: min-content;
+    width: min-content;
+    font-size: 40px;
+    font-family: 'Montserrat', sans-serif;
+    
+}
+
+.cash-amount-middle::after {
+    content: "$249.99";
+    height: min-content;
+    width: min-content;
+    font-size: 40px;
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+input[type = "checkbox"]:checked ~ .cash-amount-middle::after {
+    content: "$24.99";
+    height: min-content;
+    width: min-content;
+    font-size: 40px;
+    font-family: 'Montserrat', sans-serif;
+    position: absolute;
+    
+}
+
+.cash-amount-right::after {
+    content: "$399.99";
+    height: min-content;
+    width: min-content;
+    font-size: 40px;
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+input[type = "checkbox"]:checked ~ .cash-amount-right::after {
+    content: "$39.99";
+    height: min-content;
+    width: min-content;
+    font-size: 40px;
+    font-family: 'Montserrat', sans-serif;
+    
+}
+.box-container{
+    text-align: center;
+    width: min-content;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: 50px 50px 100px;
+    
+}
+
+.left-box{
+    width: 300px;
+    height: 370px;
+    background-color: white;
+    border-radius: 5%;
+}
+
+.middle-box{
+    width: 300px;
+    height: 400px;
+    background-color: white;
+    background-image: linear-gradient(hsl(236, 72%, 79%),hsl(237, 63%, 64%));
+    border-radius: 5%;
+}
+
+.right-box{
+    width: 300px;
+    height: 370px;
+    background-color: white;
+    border-radius: 5%;
+}
+
+.category{
+    text-align: center;
+    padding: 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+}
+
+.cash-amount-monthly{
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    padding: 5px;
+    }
+
+.lines{
+    content: '';
+    margin: auto;
+    height: 0.2px;
+    width: 75%;
+    top: 35%;
+}
+
+.details{
+    text-align: center;
+    padding: 5px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-size: 10px;
+}
+
+.learn-more{
+    margin: auto;
+    height: 30px;
+    margin-left: auto;
+    margin-top: 10%;
+    width: 65%;
+    border: none;
+    font-size: 9px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    border-radius: 5%;
+}
