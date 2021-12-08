@@ -1,52 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | [Challenge Name Here]</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+    <title>Frontend Mentor | [Challenge Name Here]</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap"
+      rel="stylesheet"
+    />
 
-  Our Pricing
-  Annually
-  Monthly
+    <!--------------------Desktop Css files-------------------------->
+    <link rel="stylesheet" href="./style/desktop/main.css" />
+    <link rel="stylesheet" href="./style/desktop/topBox.css" />
+    <link rel="stylesheet" href="./style/desktop/centerBox.css" />
+    <!---------------------------------------------------------------->
+    <!--------------------Mobile Css files-------------------------->
+    <link rel="stylesheet" href="./style/moblie/M_main.css" />
+    <link rel="stylesheet" href="./style/moblie/M_topBox.css" />
+    <link rel="stylesheet" href="./style/moblie/M_centerBox.css" />
+    <!---------------------------------------------------------------->
+  </head>
 
-  Basic
-  &dollar;19.99
-  &dollar;199.99
-  500 GB Storage
-  2 Users Allowed
-  Send up to 3 GB
-  Learn More
+  <body>
+    <div class="main_box">
+      <div class="top_box">
+        <div class="inner_box">
+          <div class="pricing">
+            <h2>Our Pricing</h2>
+          </div>
+          <div class="type_price">
+            <div class="annually">
+              <p>Annually</p>
+            </div>
+            <div class="mid_button">
+              <label class="switch">
+                <input type="checkbox" checked onclick="ChangeState()" />
+                <span class="slider round"></span>
+              </label>
+            </div>
+            <div class="monthly">
+              <p>Monthly</p>
+            </div>
+          </div>
+        </div>
+      </div>
 
-  Professional
-  &dollar;24.99
-  &dollar;249.99
-  1 TB Storage
-  5 Users Allowed
-  Send up to 10 GB
-  Learn More
+      <div class="center_box">
+        <div class="basic">
+          <div class="inner_basic">
+            <div><h3>Basic</h3></div>
+            <div><h1 id="bas_p">&dollar;19.99</h1></div>
+            <hr />
+            <div><h3>500 GB Storage</h3></div>
+            <hr />
+            <div><h3>2 Users Allowed</h3></div>
+            <hr />
+            <div><h3>Send up to 3 GB</h3></div>
+            <hr />
+            <a href="#" class="purple_button">Learn More</a>
+          </div>
+        </div>
+        <div class="pro">
+          <div class="inner_pro">
+            <div><h3>Professional</h3></div>
+            <div><h1 id="pro_p">&dollar;24.99</h1></div>
+            <hr />
+            <div><h3>1 TB Storage</h3></div>
+            <hr />
+            <div><h3>5 Users Allowed</h3></div>
+            <hr />
+            <div><h3>Send up to 10 GB</h3></div>
+            <hr />
+            <a href="#" class="white_button">Learn More</a>
+          </div>
+        </div>
+        <div class="master">
+          <div class="inner_master">
+            <div><h3>Master</h3></div>
+            <div><h1 id="mast_p">&dollar;39.99</h1></div>
+            <hr />
+            <div><h3>2 TB Storage</h3></div>
+            <hr />
+            <div><h3>10 Users Allowed</h3></div>
+            <hr />
+            <div><h3>Send up to 20 GB</h3></div>
+            <hr />
+            <a href="#" class="purple_button">Learn More</a>
+          </div>
+        </div>
+      </div>
+    </div>
 
-  Master
-  &dollar;39.99
-  &dollar;399.99
-  2 TB Storage
-  10 Users Allowed
-  Send up to 20 GB
-  Learn More
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+    <footer>
+      <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="#">Saar Moseri</a>.
+      </div>
+    </footer>
+  </body>
+  <script>
+    function ChangeState() {
+      console.log(document.getElementById("bas_p").innerHTML == "$19.99")
+      if(document.getElementById("bas_p").innerHTML == "$19.99"){
+        document.getElementById("bas_p").innerHTML = "$199.99";
+        document.getElementById("pro_p").innerHTML = "$249.99";
+        document.getElementById("mast_p").innerHTML = "$399.99";
+      }
+      else{
+        document.getElementById("bas_p").innerHTML = "$19.99";
+        document.getElementById("pro_p").innerHTML = "$24.99";
+        document.getElementById("mast_p").innerHTML = "$39.99";
+      }
+    }
+    </script>
 </html>
